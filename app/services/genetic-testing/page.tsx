@@ -134,6 +134,7 @@ export default function GeneticTestingPage() {
             formId="genetic-testing"
             title="基因檢測諮詢申請表"
             description="支援家屬一鍵勾選「家族腫瘤史評估」"
+            formUrl="https://form.jotform.com/261743236291053"
             extraFields={
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-4">
                 <label className="flex items-start gap-3 cursor-pointer">
