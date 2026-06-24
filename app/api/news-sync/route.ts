@@ -152,12 +152,21 @@ async function translateWithClaude(
  * 返回管线配置与状态
  */
 export async function GET() {
+  const deepseekKey = process.env.DEEPSEEK_API_KEY;
+  const anthropicKey = process.env.ANTHROPIC_API_KEY;
+  const activeAiProvider = deepseekKey ? "deepseek" : anthropicKey ? "anthropic" : null;
+
   return Response.json({
     success: true,
     message: "医学新闻聚合与翻译管线已就绪",
+    aiTranslationEnabled: Boolean(deepseekKey || anthropicKey),
+    aiProvider: activeAiProvider,
+    aiTranslationNote: activeAiProvider
+      ? `${activeAiProvider === "deepseek" ? "DeepSeek" : "Claude"} API 已配置，翻译功能已启用`
+      : "未设置 DEEPSEEK_API_KEY 或 ANTHROPIC_API_KEY 环境变量，仅抓取原文，不进行 AI 翻译。部署到 Vercel 后请在 Environment Variables 中设置。",
     pipeline: {
       step1: "多源RSS抓取 — 从 ASCO/ESMO/ACS/CRUK/NCI/IARC 抓取最新资讯",
-      step2: "AI翻译加工 — 调用 Claude API 进行繁中/英文双语翻译",
+      step2: "AI翻译加工 — 调用 DeepSeek / Claude API 进行繁中/英文双语翻译",
       step3: "自动发布 — 存入数据库并在前端展示",
       step4: "全自动闭环 — 无人值守，定时自动运行",
     },
