@@ -100,7 +100,7 @@ export default function ConsultationPage() {
             <h2 className="text-2xl font-bold text-[#3a7d5a] mb-3">提交免費問診申請</h2>
             <p className="text-gray-500">填寫以下資訊，我們會根據您的病情配對最合適的專家，並在1-2個工作日內安排問診</p>
           </div>
-          <JotformEmbed formId="consultation" title="免費問診申請表" description="請提供您當前的病歷核心摘要" />
+          <JotformEmbed formId="consultation" title="免費問診申請表" description="請提供您當前的病歷核心摘要" formUrl="https://form.jotform.com/261744048774061" />
         </div>
       </section>
     </>
