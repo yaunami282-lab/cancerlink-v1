@@ -54,7 +54,7 @@ export default function ReportAnalysisPage() {
             <h2 className="text-2xl font-bold text-[#3a7d5a] mb-3">開始免費配對評估</h2>
             <p className="text-gray-500">填寫以下資訊並上傳您的檢查報告，我們將在24小時內與您聯絡</p>
           </div>
-          <JotformEmbed formId="report-analysis" title="報告分析申請表" description="請提供您的基本資訊和檢查報告" />
+          <JotformEmbed formId="report-analysis" title="報告分析申請表" description="請提供您的基本資訊和檢查報告" formUrl="https://form.jotform.com/261743634109053" />
         </div>
       </section>
 
