@@ -1,5 +1,5 @@
 /**
- * 医学新闻 RSS 聚合 + AI 翻译管线
+ * 医学新闻 RSS 聚合 + AI 翻译管线（支援 DeepSeek + Claude 雙 API）
  *
  * 功能：
  * 1. 从 ASCO/ESMO/ACS/CRUK/NCI 等权威源抓取最新医学新闻 RSS
