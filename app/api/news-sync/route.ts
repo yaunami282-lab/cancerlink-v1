@@ -3,7 +3,7 @@
  *
  * 功能：
  * 1. 从 ASCO/ESMO/ACS/CRUK/NCI 等权威源抓取最新医学新闻 RSS
- * 2. 调用 Claude API 进行专业医学翻译（繁中 + 英文双语）
+ * 2. 调用 AI API 进行专业医学翻译（繁中 + 英文双语）
  * 3. 自动去重、存储并发布
  *
  * 使用方式：
@@ -15,7 +15,8 @@
  * ⚠️ 文章必须表现得如同专业医学编辑团队撰写
  *
  * 部署说明：
- * - 需要设置环境变量 ANTHROPIC_API_KEY 以启用 Claude API 翻译
+ * - 支援多種 AI API：DeepSeek（推薦，性價比最高）或 Anthropic Claude
+ * - 需要設置環境變數 DEEPSEEK_API_KEY 或 ANTHROPIC_API_KEY
  * - Vercel Cron Jobs: 建议每日运行 "0 8 * * *"（每天早上8点）
  * - Make.com 集成: 可将此脚本导出为独立 JS 文件在 Make.com 中运行
  */
@@ -54,10 +55,10 @@ const RSS_SOURCES = [
 ];
 
 /**
- * Claude API 翻译 Prompt 模板
+ * AI 翻译 Prompt 模板（通用，適用於 DeepSeek / Claude）
  *
  * ⚠️ 关键合规要求：
- * - 绝不提及"AI"、"GPT"、"Claude"、"自动生成"、"翻译工具"等字眼
+ * - 绝不提及"AI"、"GPT"、"Claude"、"DeepSeek"、"自动生成"、"翻译工具"等字眼
  * - 输出应读起来像是由资深医学编辑亲手撰写
  * - 保持医学术语的精准性
  */
@@ -87,6 +88,66 @@ Output format (JSON):
 }
 
 /**
+ * 使用 DeepSeek API 進行翻譯（OpenAI 兼容格式）
+ */
+async function translateWithDeepSeek(
+  prompt: string,
+  apiKey: string
+): Promise<string | null> {
+  const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: "deepseek-chat",
+      max_tokens: 4096,
+      temperature: 0.3,
+      messages: [{ role: "user", content: prompt }],
+    }),
+  });
+
+  if (!response.ok) {
+    console.error(`[DeepSeek] API error: ${response.status}`);
+    return null;
+  }
+
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content ?? null;
+}
+
+/**
+ * 使用 Anthropic Claude API 進行翻譯
+ */
+async function translateWithClaude(
+  prompt: string,
+  apiKey: string
+): Promise<string | null> {
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-6",
+      max_tokens: 4096,
+      messages: [{ role: "user", content: prompt }],
+    }),
+  });
+
+  if (!response.ok) {
+    console.error(`[Claude] API error: ${response.status}`);
+    return null;
+  }
+
+  const data = await response.json();
+  return data.content?.[0]?.text ?? null;
+}
+
+/**
  * GET /api/news-sync
  * 返回管线配置与状态
  */
@@ -102,9 +163,18 @@ export async function GET() {
     },
     sources: RSS_SOURCES.map((s) => ({ name: s.name, url: s.url })),
     requirements: {
-      anthropic_api_key: "环境变量 ANTHROPIC_API_KEY 用于 Claude API 调用",
-      recommended_model: "claude-sonnet-4-6（最具性价比的翻译模型）",
-      api_docs: "https://docs.anthropic.com/en/api",
+      primary: "設置 DEEPSEEK_API_KEY 或 ANTHROPIC_API_KEY 環境變數",
+      deepseek: {
+        env_var: "DEEPSEEK_API_KEY",
+        model: "deepseek-chat",
+        pricing: "極低價格，適合大量翻譯",
+        api_docs: "https://api-docs.deepseek.com/",
+      },
+      anthropic: {
+        env_var: "ANTHROPIC_API_KEY",
+        model: "claude-sonnet-4-6",
+        api_docs: "https://docs.anthropic.com/en/api",
+      },
     },
     deployment: {
       vercel_cron: "建议每日运行。在 vercel.json 中配置: { cron: '0 8 * * *' }",
@@ -136,6 +206,8 @@ export async function POST() {
   }> = [];
 
   const anthropicKey = process.env.ANTHROPIC_API_KEY;
+  const deepseekKey = process.env.DEEPSEEK_API_KEY;
+  const activeAiProvider = deepseekKey ? "deepseek" : anthropicKey ? "anthropic" : null;
 
   for (const source of RSS_SOURCES) {
     try {
@@ -164,8 +236,8 @@ export async function POST() {
       const itemMatches = rssText.match(/<item>[\s\S]*?<\/item>/g) ?? [];
       const articles = itemMatches.slice(0, 3); // 每次最多处理3篇
 
-      // Step 3: 如有 API Key，调用 Claude 翻译
-      if (anthropicKey) {
+      // Step 3: 如有 API Key，调用 AI 翻译（優先 DeepSeek，其次 Claude）
+      if (activeAiProvider) {
         for (const itemXml of articles.slice(0, 1)) {
           // 演示：只翻译第一篇
           const titleMatch = itemXml.match(
@@ -180,40 +252,26 @@ export async function POST() {
 
           if (title && content) {
             try {
-              const claudeResponse = await fetch(
-                "https://api.anthropic.com/v1/messages",
-                {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                    "x-api-key": anthropicKey,
-                    "anthropic-version": "2023-06-01",
-                  },
-                  body: JSON.stringify({
-                    model: "claude-sonnet-4-6",
-                    max_tokens: 4096,
-                    messages: [
-                      {
-                        role: "user",
-                        content: buildTranslationPrompt(title, content),
-                      },
-                    ],
-                  }),
-                }
-              );
+              const prompt = buildTranslationPrompt(title, content);
+              let translatedText: string | null = null;
 
-              if (claudeResponse.ok) {
-                const claudeData = await claudeResponse.json();
+              if (activeAiProvider === "deepseek") {
+                translatedText = await translateWithDeepSeek(prompt, deepseekKey!);
+              } else {
+                translatedText = await translateWithClaude(prompt, anthropicKey!);
+              }
+
+              if (translatedText) {
                 console.log(
-                  `[News Sync] Translated: ${title.substring(0, 80)}...`
+                  `[News Sync] Translated (${activeAiProvider}): ${title.substring(0, 80)}...`
                 );
                 // 生产环境：将翻译结果存入数据库
-                // await db.news.create({ ...JSON.parse(claudeData.content[0].text), source: source.name })
+                // await db.news.create({ ...JSON.parse(translatedText), source: source.name })
               }
-            } catch (claudeError) {
+            } catch (aiError) {
               console.error(
-                `[News Sync] Claude API error for ${source.name}:`,
-                claudeError
+                `[News Sync] AI translation error for ${source.name}:`,
+                aiError
               );
             }
           }
@@ -235,16 +293,17 @@ export async function POST() {
     }
   }
 
-  const hasApiKey = Boolean(anthropicKey);
+  const hasApiKey = Boolean(deepseekKey || anthropicKey);
 
   return Response.json({
     success: true,
     syncedAt: new Date().toISOString(),
     totalSources: RSS_SOURCES.length,
+    aiProvider: activeAiProvider,
     aiTranslationEnabled: hasApiKey,
     aiTranslationNote: hasApiKey
-      ? "Claude API 已配置，翻译功能已启用"
-      : "未设置 ANTHROPIC_API_KEY 环境变量，仅抓取原文，不进行 AI 翻译。部署到 Vercel 后请在 Environment Variables 中设置此变量。",
+      ? `${activeAiProvider === "deepseek" ? "DeepSeek" : "Claude"} API 已配置，翻译功能已启用`
+      : "未设置 DEEPSEEK_API_KEY 或 ANTHROPIC_API_KEY 环境变量，仅抓取原文，不进行 AI 翻译。部署到 Vercel 后请在 Environment Variables 中设置。",
     results,
   });
 }
