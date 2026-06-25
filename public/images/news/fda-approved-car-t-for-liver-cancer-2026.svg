@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a365d"/>
+      <stop offset="50%" stop-color="#2a4a7f"/>
+      <stop offset="100%" stop-color="#2d6a4f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+
+  <!-- 細胞/CAR-T 圖案 -->
+  <g transform="translate(850, 280)" opacity="0.12">
+    <circle cx="0" cy="0" r="100" fill="white"/>
+    <circle cx="0" cy="0" r="75" fill="none" stroke="white" stroke-width="2"/>
+    <!-- 表面受體 -->
+    <g stroke="white" stroke-width="3" fill="none">
+      <path d="M0 -100 L0 -140 M0 -140 L-15 -155"/>
+      <path d="M71 -71 L100 -100 M100 -100 L115 -85"/>
+      <path d="M100 0 L140 0 M140 0 L155 -15"/>
+      <path d="M71 71 L100 100 M100 100 L85 115"/>
+      <path d="M0 100 L0 140 M0 140 L15 155"/>
+      <path d="M-71 71 L-100 100 M-100 100 L-115 85"/>
+      <path d="M-100 0 L-140 0 M-140 0 L-155 15"/>
+      <path d="M-71 -71 L-100 -100 M-100 -100 L-85 -115"/>
+    </g>
+    <!-- Y型抗體標記 -->
+    <g transform="translate(-30, -30)" fill="white" opacity="0.6">
+      <rect x="0" y="0" width="4" height="12" rx="2"/>
+      <rect x="-5" y="-8" width="4" height="10" rx="2" transform="rotate(-30, -3, -8)"/>
+      <rect x="5" y="-8" width="4" height="10" rx="2" transform="rotate(30, 7, -8)"/>
+    </g>
+  </g>
+
+  <!-- 分子結構裝飾 -->
+  <g transform="translate(200, 400)" opacity="0.08">
+    <circle cx="0" cy="0" r="30" fill="white"/>
+    <circle cx="80" cy="-40" r="20" fill="white"/>
+    <circle cx="80" cy="40" r="20" fill="white"/>
+    <circle cx="160" cy="0" r="25" fill="white"/>
+    <line x1="30" y1="0" x2="60" y2="-20" stroke="white" stroke-width="3"/>
+    <line x1="30" y1="0" x2="60" y2="20" stroke="white" stroke-width="3"/>
+    <line x1="100" y1="-20" x2="135" y2="-5" stroke="white" stroke-width="3"/>
+    <line x1="100" y1="20" x2="135" y2="5" stroke="white" stroke-width="3"/>
+  </g>
+
+  <!-- 實驗室器皿 -->
+  <g transform="translate(120, 90)" opacity="0.1">
+    <rect x="0" y="0" width="12" height="40" rx="2" fill="white"/>
+    <rect x="20" y="-10" width="16" height="50" rx="3" fill="white"/>
+    <rect x="44" y="5" width="10" height="35" rx="2" fill="white"/>
+    <path d="M0 20 Q30 -20 54 20" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- 文字區 -->
+  <g transform="translate(80, 160)">
+    <text x="0" y="0" font-family="Noto Sans TC, sans-serif" font-size="48" font-weight="800" fill="white">FDA 正式批准</text>
+    <text x="0" y="60" font-family="Noto Sans TC, sans-serif" font-size="34" font-weight="500" fill="rgba(255,255,255,0.85)">全球首款肝癌 CAR-T 細胞療法上市</text>
+    <rect x="0" y="90" width="60" height="4" rx="2" fill="#52b788"/>
+    <text x="0" y="135" font-family="Noto Sans TC, sans-serif" font-size="20" fill="rgba(255,255,255,0.6)">靶向藥物 · Cancer Link 癌研連線</text>
+  </g>
+</svg>

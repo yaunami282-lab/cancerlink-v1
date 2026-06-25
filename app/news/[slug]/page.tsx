@@ -53,10 +53,15 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
       {/* 文章配圖區 */}
       <section className="bg-gray-50 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-gradient-to-br from-[#e8f5e9] via-white to-[#f0faf5] rounded-2xl p-8 sm:p-12 text-center border border-[#52b788]/10">
-            <div className="text-7xl mb-4">🔬</div>
-            <p className="text-sm text-gray-400 italic">{article.imageDescription}</p>
+          <div className="rounded-2xl overflow-hidden shadow-md border border-[#52b788]/10">
+            <img
+              src={`/images/news/${article.slug}.svg`}
+              alt={article.imageDescription}
+              className="w-full h-auto object-cover"
+              style={{ maxHeight: 400 }}
+            />
           </div>
+          <p className="text-sm text-gray-400 italic mt-3 text-center">{article.imageDescription}</p>
         </div>
       </section>
 

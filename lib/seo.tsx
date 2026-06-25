@@ -144,7 +144,7 @@ export function generateMedicalArticleSchema(article: NewsArticle) {
     "@type": "MedicalScholarlyArticle",
     headline: article.title,
     description: article.summary,
-    image: `${SITE_URL}/images/news/${article.slug}.webp`,
+    image: `${SITE_URL}/images/news/${article.slug}.svg`,
     datePublished: article.date,
     author: {
       "@type": "MedicalOrganization",

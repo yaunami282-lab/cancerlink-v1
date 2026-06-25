@@ -24,6 +24,7 @@ export default function NewsCard({
 }) {
   const badgeStyle = CATEGORY_STYLES[article.categoryKey] ?? "bg-gray-50 text-gray-600";
   const icon = CATEGORY_ICONS[article.categoryKey] ?? "📄";
+  const imagePath = `/images/news/${article.slug}.svg`;
 
   if (variant === "featured") {
     return (
@@ -31,8 +32,13 @@ export default function NewsCard({
         href={`/news/${article.slug}`}
         className="group block bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
       >
-        <div className="bg-gradient-to-br from-[#5b9e7a] to-[#52b788] h-52 flex items-center justify-center relative overflow-hidden">
-          <span className="text-6xl opacity-30">🔬</span>
+        <div className="h-52 relative overflow-hidden bg-gradient-to-br from-[#5b9e7a] to-[#52b788]">
+          <img
+            src={imagePath}
+            alt={article.title}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/40 to-transparent p-6">
             <span className={`${badgeStyle} text-xs font-semibold px-2.5 py-1 rounded-full`}>
               {icon} {article.category}
@@ -59,8 +65,13 @@ export default function NewsCard({
         href={`/news/${article.slug}`}
         className="group flex gap-4 p-4 bg-white rounded-xl hover:bg-[#f6faf7] transition-colors border border-gray-50"
       >
-        <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-gradient-to-br from-[#e8f5e9] to-[#f0faf5] flex items-center justify-center text-2xl">
-          {icon}
+        <div className="flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden bg-gradient-to-br from-[#e8f5e9] to-[#f0faf5]">
+          <img
+            src={imagePath}
+            alt={article.title}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
         <div className="flex-1 min-w-0">
           <span className={`${badgeStyle} text-xs font-medium px-2 py-0.5 rounded-full inline-block mb-1`}>
@@ -80,8 +91,13 @@ export default function NewsCard({
       href={`/news/${article.slug}`}
       className="group block bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
     >
-      <div className="bg-gradient-to-br from-[#e8f5e9] to-[#f0faf5] h-40 flex items-center justify-center">
-        <span className="text-5xl opacity-40">{icon}</span>
+      <div className="h-40 overflow-hidden bg-gradient-to-br from-[#e8f5e9] to-[#f0faf5]">
+        <img
+          src={imagePath}
+          alt={article.title}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
       <div className="p-5">
         <span className={`${badgeStyle} text-xs font-medium px-2.5 py-1 rounded-full inline-block mb-3`}>
