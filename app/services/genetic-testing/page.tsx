@@ -1,7 +1,7 @@
 import JotformEmbed from "@/components/JotformEmbed";
 
 export const metadata = {
-  title: "腫瘤基因檢測 - Cancer Link 臨床連線",
+  title: "腫瘤基因檢測 - Cancer Link 癌研連線",
   description:
     "為患者及家屬提供遺傳風險評估與精準基因檢測諮詢。了解您的基因，守護全家人的健康未來。",
 };

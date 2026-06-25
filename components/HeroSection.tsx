@@ -8,7 +8,7 @@ export default function HeroSection() {
       {/* 封面圖背景 */}
       <Image
         src="/images/cover.jpg"
-        alt="Cancer Link 臨床連線"
+        alt="Cancer Link 癌研連線"
         fill
         className="object-cover object-center"
         priority

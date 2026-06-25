@@ -3,7 +3,7 @@ import TrialCard from "@/components/TrialCard";
 import JotformEmbed from "@/components/JotformEmbed";
 
 export const metadata = {
-  title: "報告分析與研究配對 - Cancer Link 臨床連線",
+  title: "報告分析與研究配對 - Cancer Link 癌研連線",
   description: "上傳您的醫學檢查報告，AI + 專家團隊為您精準配對全球正在招募的臨床試驗。",
 };
 

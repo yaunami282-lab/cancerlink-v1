@@ -2,6 +2,7 @@ import { NEWS_ARTICLES } from "@/data/news";
 import NewsCard from "@/components/NewsCard";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd, generateMedicalArticleSchema } from "@/lib/seo";
 
 const CATEGORY_STYLES: Record<string, string> = {
   targeted: "bg-blue-50 text-blue-600",
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = NEWS_ARTICLES.find((a) => a.slug === slug);
   if (!article) return { title: "文章未找到" };
-  return { title: `${article.title} - Cancer Link 臨床連線`, description: article.summary };
+  return { title: `${article.title} - Cancer Link 癌研連線`, description: article.summary };
 }
 
 export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -30,6 +31,8 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <>
+      {/* ===== JSON-LD 醫學學術文章結構化數據（SEO 核心） ===== */}
+      <JsonLd data={generateMedicalArticleSchema(article)} />
       {/* 文章頭部 */}
       <section className="bg-gradient-to-br from-[#5b9e7a] via-[#52b788] to-[#40916c] text-white py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

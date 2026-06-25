@@ -18,7 +18,7 @@ import { NewsArticle } from "@/data/news";
 // ============================================================
 // 网站基础信息
 // ============================================================
-const SITE_URL = "https://www.cancerlink.org";
+const SITE_URL = "https://www.cancerlink.co";
 
 /**
  * Organization Schema — 全站级别的组织信息

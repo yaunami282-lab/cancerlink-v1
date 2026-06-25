@@ -1,8 +1,9 @@
 import { NEWS_ARTICLES } from "@/data/news";
 import NewsCard from "@/components/NewsCard";
+import { JsonLd, generateMedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "醫學前沿資訊 - Cancer Link 臨床連線",
+  title: "醫學前沿資訊 - Cancer Link 癌研連線",
   description:
     "掌握全球腫瘤醫學前沿動態。最新國際癌症治療指南、臨床研究重大突破、FDA/NMPA新藥批准、權威統計數據。",
 };
@@ -21,6 +22,15 @@ export default function NewsPage() {
 
   return (
     <>
+      {/* ===== JSON-LD 醫學網頁結構化數據（SEO 核心） ===== */}
+      <JsonLd
+        data={generateMedicalWebPageSchema({
+          title: "醫學前沿資訊 - Cancer Link 癌研連線",
+          description:
+            "掌握全球腫瘤醫學前沿動態。最新國際癌症治療指南、臨床研究重大突破、FDA/NMPA新藥批准、權威統計數據。",
+          url: "/news",
+        })}
+      />
       {/* 頁面頭部 */}
       <section className="bg-gradient-to-br from-[#5b9e7a] via-[#52b788] to-[#40916c] text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

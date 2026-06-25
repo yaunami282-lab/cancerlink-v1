@@ -11,8 +11,8 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    default: "Cancer Link 臨床連線 - 腫瘤臨床研究配對與患者支援平台",
-    template: "%s - Cancer Link 臨床連線",
+    default: "Cancer Link 癌研連線 - 腫瘤臨床研究配對與患者支援平台",
+    template: "%s - Cancer Link 癌研連線",
   },
   description:
     "AI驅動的腫瘤臨床試驗精準配對平台，連結每一位癌症患者奔赴希望。免費臨床試驗配對、腫瘤醫生預約、基因檢測諮詢。一旦患者成功配對入組，所有試驗相關治療費用全免！",
@@ -24,24 +24,24 @@ export const metadata: Metadata = {
     "基因檢測",
     "癌症治療",
     "Cancer Link",
-    "臨床連線",
+    "癌研連線",
   ],
-  authors: [{ name: "Cancer Link 臨床連線" }],
-  metadataBase: new URL("https://www.cancerlink.org"),
+  authors: [{ name: "Cancer Link 癌研連線" }],
+  metadataBase: new URL("https://www.cancerlink.co"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Cancer Link 臨床連線 - 連結患者，奔赴希望",
+    title: "Cancer Link 癌研連線 - 連結患者，奔赴希望",
     description:
       "AI驅動的腫瘤臨床試驗配對與患者綜合支援平台。一旦患者成功配對入組，所有試驗相關治療費用全免！",
     type: "website",
     locale: "zh_HK",
-    siteName: "Cancer Link 臨床連線",
+    siteName: "Cancer Link 癌研連線",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cancer Link 臨床連線 - 連結患者，奔赴希望",
+    title: "Cancer Link 癌研連線 - 連結患者，奔赴希望",
     description:
       "AI驅動的腫瘤臨床試驗配對與患者綜合支援平台。一旦患者成功配對入組，所有試驗相關治療費用全免！",
   },

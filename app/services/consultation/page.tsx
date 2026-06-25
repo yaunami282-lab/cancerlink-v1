@@ -1,15 +1,21 @@
 import { DOCTORS } from "@/data/doctors";
 import JotformEmbed from "@/components/JotformEmbed";
 import { CONFIG } from "@/lib/constants";
+import { JsonLd, generatePhysicianSchema } from "@/lib/seo";
 
 export const metadata = {
-  title: "預約諮詢腫瘤醫生 - Cancer Link 臨床連線",
+  title: "預約諮詢腫瘤醫生 - Cancer Link 癌研連線",
   description: "匯聚頂尖三甲醫院腫瘤專家，提供免費初步問診評估。讓專業醫生為您的治療路徑把關。",
 };
 
 export default function ConsultationPage() {
   return (
     <>
+      {/* ===== JSON-LD 醫生結構化數據（SEO 核心） ===== */}
+      {DOCTORS.map((doctor) => (
+        <JsonLd key={doctor.id} data={generatePhysicianSchema(doctor)} />
+      ))}
+
       {/* 頁面頭部 */}
       <section className="bg-gradient-to-br from-[#5b9e7a] via-[#52b788] to-[#40916c] text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

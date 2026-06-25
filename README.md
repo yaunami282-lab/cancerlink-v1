@@ -21,7 +21,7 @@ Cancer Link 是一个由人工智能技术深度驱动的现代化肿瘤临床�
 - **语言**: TypeScript
 - **样式**: Tailwind CSS v4
 - **部署**: Vercel（零成本自动部署）
-- **API**: ClinicalTrials.gov API, Claude API (Anthropic)
+- **API**: ClinicalTrials.gov API, DeepSeek API / Claude API (雙 AI 翻譯)
 - **表单**: Jotform（可替换）
 - **客服**: WhatsApp Business API
 
@@ -58,7 +58,7 @@ open http://localhost:3000
 
 1. 将项目推送到 GitHub 仓库
 2. 在 [Vercel](https://vercel.com) 导入该仓库
-3. 在 Settings > Environment Variables 中设置 `ANTHROPIC_API_KEY`
+3. 在 Settings > Environment Variables 中设置 `DEEPSEEK_API_KEY`（或 `ANTHROPIC_API_KEY`）
 4. 部署完成后绑定自定义域名
 5. 在 Google Search Console 提交 sitemap
 
@@ -66,9 +66,10 @@ open http://localhost:3000
 
 | 变量名 | 说明 | 是否必需 |
 |--------|------|----------|
-| `ANTHROPIC_API_KEY` | Claude API Key（新闻翻译管线） | 可选（不设置则只抓取原文） |
+| `DEEPSEEK_API_KEY` | DeepSeek API Key（新闻翻译管线，推荐） | 可选（不设置则只抓取原文） |
+| `ANTHROPIC_API_KEY` | Claude API Key（备选翻译方案） | 可选 |
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp 客服号码 | 否（已硬编码默认值） |
-| `NEXT_PUBLIC_JOTFORM_*` | Jotform 表单链接 | 否（占位表单已就绪） |
+| `NEXT_PUBLIC_JOTFORM_*` | Jotform 表单链接 | 否（表单已配置） |
 
 ## 自动化管线
 

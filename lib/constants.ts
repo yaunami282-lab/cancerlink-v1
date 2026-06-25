@@ -32,10 +32,10 @@ export const CONFIG = {
   ctaButton: "開始免費配對評估",
 
   /** 聯絡電郵 */
-  contactEmail: "info@cancerlink.org",
+  contactEmail: "info@cancerlink.co",
 
   /** 版權資訊 */
-  copyright: "© 2026 Cancer Link 臨床連線. All rights reserved.",
+  copyright: "© 2026 Cancer Link 癌研連線. All rights reserved.",
 };
 
 /** 導航選單 */
