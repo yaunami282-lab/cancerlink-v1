@@ -1,68 +1,75 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import { LocaleProvider } from "@/components/LocaleProvider";
 import {
   JsonLd,
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "@/lib/seo";
+import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Cancer Link 癌研連線 - 腫瘤臨床研究配對與患者支援平台",
-    template: "%s - Cancer Link 癌研連線",
-  },
-  description:
-    "AI驅動的腫瘤臨床試驗精準配對平台，連結每一位癌症患者奔赴希望。免費臨床試驗配對、腫瘤醫生預約、基因檢測諮詢。一旦患者成功配對入組，所有試驗相關治療費用全免！",
-  keywords: [
-    "腫瘤臨床試驗",
-    "癌症臨床研究",
-    "臨床試驗配對",
-    "腫瘤醫生預約",
-    "基因檢測",
-    "癌症治療",
-    "Cancer Link",
-    "癌研連線",
-  ],
-  authors: [{ name: "Cancer Link 癌研連線" }],
-  metadataBase: new URL("https://www.cancerlink.co"),
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Cancer Link 癌研連線 - 連結患者，奔赴希望",
-    description:
-      "AI驅動的腫瘤臨床試驗配對與患者綜合支援平台。一旦患者成功配對入組，所有試驗相關治療費用全免！",
-    type: "website",
-    locale: "zh_HK",
-    siteName: "Cancer Link 癌研連線",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Cancer Link 癌研連線 - 連結患者，奔赴希望",
-    description:
-      "AI驅動的腫瘤臨床試驗配對與患者綜合支援平台。一旦患者成功配對入組，所有試驗相關治療費用全免！",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    "max-snippet": -1,
-    "max-image-preview": "large" as const,
-    "max-video-preview": -1,
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  try {
+    const h = await headers();
+    const raw = h.get("x-locale") || defaultLocale;
+    const locale: Locale = hasLocale(raw) ? raw : defaultLocale;
+    const dict = await getDictionary(locale);
 
-export default function RootLayout({
+    return {
+      title: {
+        default: dict.seo.siteTitle,
+        template: `%s - Cancer Link`,
+      },
+      description: dict.seo.siteDescription,
+      keywords: dict.seo.keywords.split(","),
+      authors: [{ name: "Cancer Link" }],
+      metadataBase: new URL("https://www.cancerlink.co"),
+      alternates: { canonical: "/" },
+      openGraph: {
+        title: dict.seo.ogTitle,
+        description: dict.seo.ogDescription,
+        type: "website",
+        locale: locale === "zh-CN" ? "zh_CN" : locale === "en" ? "en_US" : "zh_HK",
+        siteName: dict.config.siteName,
+      },
+      twitter: {
+        card: "summary_large_image" as const,
+        title: dict.seo.ogTitle,
+        description: dict.seo.ogDescription,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large" as const,
+        "max-video-preview": -1,
+      },
+    };
+  } catch {
+    return {
+      title: { default: "Cancer Link", template: "%s - Cancer Link" },
+      description: "",
+    };
+  }
+}
+
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
+  const h = await headers();
+  const raw = h.get("x-locale") || defaultLocale;
+  const locale: Locale = hasLocale(raw) ? raw : defaultLocale;
+  const dict = await getDictionary(locale);
+
+  const htmlLang = locale === "zh-HK" ? "zh-HK" : locale === "zh-CN" ? "zh-CN" : "en";
+
   return (
-    <html lang="zh-HK" className="h-full scroll-smooth">
+    <html lang={htmlLang} className="h-full scroll-smooth">
       <head>
-        {/* 预连接 Google Fonts 以加快字体加载 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -75,14 +82,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-[#f7fbf7] text-gray-900 antialiased">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppWidget />
-
-        {/* ===== JSON-LD 结构化数据（SEO 核心） ===== */}
-        <JsonLd data={generateOrganizationSchema()} />
-        <JsonLd data={generateWebSiteSchema()} />
+        <LocaleProvider initialLocale={locale}>
+          <Navbar dict={dict.nav} />
+          <main className="flex-1">{children}</main>
+          <Footer dict={dict.footer} />
+          <WhatsAppWidget dict={dict.whatsapp} config={dict.config} />
+          <JsonLd data={generateOrganizationSchema()} />
+          <JsonLd data={generateWebSiteSchema()} />
+        </LocaleProvider>
       </body>
     </html>
   );

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <pattern id="img" patternUnits="userSpaceOnUse" width="800" height="400">
+      <image href="https://images.unsplash.com/photo-1576086213369-97a801d7a83c?w=800&amp;h=400&amp;fit=crop&amp;crop=center" width="800" height="400"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#img)"/>
+</svg>

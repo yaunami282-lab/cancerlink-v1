@@ -1,17 +1,22 @@
+import { headers } from "next/headers";
 import HeroSection from "@/components/HeroSection";
 import ServiceCards from "@/components/ServiceCards";
 import FAQSection from "@/components/FAQSection";
-import { FAQ_DATA } from "@/data/faq";
 import { JsonLd, generateFAQSchema } from "@/lib/seo";
+import { getDictionary, hasLocale, defaultLocale, type Locale } from "@/lib/i18n";
 
-export default function Home() {
+export default async function Home() {
+  const h = await headers();
+  const raw = h.get("x-locale") || defaultLocale;
+  const locale: Locale = hasLocale(raw) ? raw : defaultLocale;
+  const dict = await getDictionary(locale);
+
   return (
     <>
-      {/* ===== JSON-LD FAQ 結構化數據（SEO 核心） ===== */}
-      <JsonLd data={generateFAQSchema(FAQ_DATA)} />
-      <HeroSection />
-      <ServiceCards />
-      <FAQSection />
+      <JsonLd data={generateFAQSchema(dict.faq.questions)} />
+      <HeroSection dict={dict.home} />
+      <ServiceCards dict={dict} />
+      <FAQSection dict={dict} />
     </>
   );
 }

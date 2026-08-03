@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
     },
     {
-      url: `${baseUrl}/services/consultation`,
+      url: `${baseUrl}/services/cancer-companion`,
       priority: 0.9,
       changeFrequency: "weekly" as const,
     },

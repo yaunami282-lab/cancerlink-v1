@@ -186,3 +186,75 @@ export function GeneticTestingIllustration() {
     </svg>
   );
 }
+
+export function CancerCompanionIllustration() {
+  return (
+    <svg
+      viewBox="0 0 200 200"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-auto max-w-[180px] mx-auto"
+    >
+      {/* 彎曲路徑 — 象徵抗癌旅程 */}
+      <path
+        d="M20 170 Q60 140 100 145 Q140 150 180 135"
+        stroke="#52b788"
+        strokeWidth="3"
+        fill="none"
+        strokeLinecap="round"
+        strokeDasharray="6 4"
+      />
+      {/* 路上的小點點 */}
+      <circle cx="60" cy="152" r="2.5" fill="#74c99a" />
+      <circle cx="100" cy="147" r="2.5" fill="#74c99a" />
+      <circle cx="140" cy="149" r="2.5" fill="#74c99a" />
+
+      {/* 左側人物（患者） */}
+      <g transform="translate(75, 62)">
+        <circle cx="0" cy="0" r="14" fill="#f5e6d3" stroke="#3a7d5a" strokeWidth="2.5" />
+        <path d="M-14 0Q-14 -14 0 -14Q14 -14 14 0" fill="#5a4a3a" />
+        <circle cx="-5" cy="0" r="2" fill="#333" />
+        <circle cx="5" cy="0" r="2" fill="#333" />
+        <path d="M-4 5Q0 9 4 5" stroke="#333" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <path d="M-10 14L-14 55L14 55L10 14" fill="#e8f5e9" stroke="#3a7d5a" strokeWidth="2.5" />
+        <path d="M10 25Q25 30 35 35" stroke="#3a7d5a" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      </g>
+
+      {/* 右側人物（陪跑員） */}
+      <g transform="translate(125, 58)">
+        <circle cx="0" cy="0" r="14" fill="#f5e6d3" stroke="#3a7d5a" strokeWidth="2.5" />
+        <path d="M-14 -2Q-14 -16 0 -17Q14 -16 14 -2" fill="#3a7d5a" />
+        <circle cx="-5" cy="0" r="2" fill="#333" />
+        <circle cx="5" cy="0" r="2" fill="#333" />
+        <path d="M-4 5Q0 9 4 5" stroke="#333" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <path d="M-10 14L-14 55L14 55L10 14" fill="white" stroke="#3a7d5a" strokeWidth="2.5" />
+        <path d="M-4 18L0 25L4 18" stroke="#3a7d5a" strokeWidth="1.5" fill="none" />
+        <path d="M-10 25Q-20 30 -25 35" stroke="#3a7d5a" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        <rect x="-6" y="38" width="12" height="10" rx="2" fill="#e8f5e9" stroke="#52b788" strokeWidth="1" />
+        <path d="M5 25Q12 22 12 28Q12 34 8 36" stroke="#e74c3c" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+      </g>
+
+      {/* 心形 */}
+      <g transform="translate(100, 105)">
+        <path
+          d="M0 -6Q-4 -14 -10 -10Q-16 -6 -10 4L0 15L10 4Q16 -6 10 -10Q4 -14 0 -6Z"
+          fill="#e74c3c"
+          opacity="0.8"
+        />
+      </g>
+
+      {/* 盾牌 */}
+      <g transform="translate(100, 185)" opacity="0.5">
+        <path
+          d="M-15 -10L0 -22L15 -10L12 10Q0 15 -12 10Z"
+          fill="none"
+          stroke="#52b788"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path d="M-5 -2L0 2L5 -2" stroke="#52b788" strokeWidth="2" strokeLinecap="round" fill="none" />
+      </g>
+    </svg>
+  );
+}

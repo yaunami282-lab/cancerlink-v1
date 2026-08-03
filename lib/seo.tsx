@@ -12,7 +12,6 @@
  */
 
 import { CONFIG } from "@/lib/constants";
-import { Doctor, DOCTORS } from "@/data/doctors";
 import { NewsArticle } from "@/data/news";
 
 // ============================================================
@@ -58,37 +57,12 @@ export function generateOrganizationSchema() {
     knowsAbout: [
       "Cancer Clinical Trials",
       "Tumor Genetic Testing",
-      "Oncology Consultation",
+      "Cancer Patient Navigation",
       "Cancer Screening",
     ],
     sameAs: [
       // 社交账号链接（后续替换为真实链接）
     ],
-  };
-}
-
-/**
- * Physician Schema — 医生个人页面结构化数据
- * Google 会以此识别并展示医生信息在搜索结果中
- */
-export function generatePhysicianSchema(doctor: Doctor) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    name: doctor.name,
-    description: `${doctor.title}，${doctor.experience}，擅长${doctor.specialties.join("、")}`,
-    image: `${SITE_URL}${doctor.photo}`,
-    medicalSpecialty: "Oncology",
-    hospitalAffiliation: {
-      "@type": "Hospital",
-      name: doctor.hospital,
-    },
-    knowsAbout: doctor.specialties,
-    availableLanguage: doctor.languages,
-    areaServed: {
-      "@type": "City",
-      name: "Hong Kong",
-    },
   };
 }
 

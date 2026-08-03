@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <filter id="sh5" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#2c3e50" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="bg7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f7f3"/>
+      <stop offset="100%" stop-color="#eae5d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg7)"/>
+  <rect x="400" y="0" width="180" height="400" fill="#fff8e1" opacity="0.18"/>
+  <!-- 診間桌面 -->
+  <rect x="60" y="290" width="680" height="110" fill="#e0d6c3" rx="8" filter="url(#sh5)"/>
+  <!-- 篩查資訊手冊 -->
+  <rect x="180" y="160" width="180" height="135" fill="#fff" rx="6" filter="url(#sh5)" transform="rotate(-2 270 227)"/>
+  <rect x="185" y="165" width="170" height="125" fill="#fefefe" rx="4" transform="rotate(-2 270 227)"/>
+  <rect x="190" y="170" width="160" height="35" fill="#40916c" rx="4" transform="rotate(-2 270 227)"/>
+  <text x="270" y="185" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" font-family="sans-serif" transform="rotate(-2 270 227)">大腸癌篩查</text>
+  <text x="270" y="196" text-anchor="middle" fill="#a5d6a7" font-size="8" font-family="sans-serif" transform="rotate(-2 270 227)">篩查選擇指南</text>
+  <rect x="200" y="215" width="100" height="5" fill="#e0e0e0" rx="2" transform="rotate(-2 270 227)"/>
+  <rect x="200" y="228" width="80" height="5" fill="#e0e0e0" rx="2" transform="rotate(-2 270 227)"/>
+  <rect x="200" y="241" width="110" height="5" fill="#e0e0e0" rx="2" transform="rotate(-2 270 227)"/>
+  <rect x="200" y="254" width="90" height="5" fill="#e0e0e0" rx="2" transform="rotate(-2 270 227)"/>
+  <rect x="200" y="267" width="105" height="5" fill="#e0e0e0" rx="2" transform="rotate(-2 270 227)"/>
+  <!-- 糞便檢測盒 -->
+  <rect x="420" y="220" width="90" height="65" fill="#fff" rx="8" filter="url(#sh5)"/>
+  <rect x="425" y="225" width="80" height="55" fill="#fafaf9" rx="6"/>
+  <rect x="430" y="230" width="70" height="12" fill="#40916c" rx="2"/>
+  <text x="465" y="240" text-anchor="middle" fill="#fff" font-size="8" font-weight="600" font-family="sans-serif">FIT 檢測</text>
+  <rect x="435" y="250" width="40" height="15" fill="#e8f5e9" rx="3"/>
+  <rect x="480" y="250" width="18" height="15" fill="#e8f5e9" rx="3"/>
+  <!-- 大腸鏡圖示卡片 -->
+  <rect x="560" y="200" width="100" height="70" fill="#fff" rx="6" filter="url(#sh5)"/>
+  <rect x="565" y="205" width="90" height="60" fill="#fefefe" rx="4"/>
+  <circle cx="610" cy="235" r="20" fill="#e8f5e9"/>
+  <ellipse cx="610" cy="230" rx="6" ry="10" fill="#81c784"/>
+  <text x="610" y="272" text-anchor="middle" fill="#666" font-size="8" font-family="sans-serif">結腸鏡檢查</text>
+  <!-- 前景虛化 -->
+  <circle cx="700" cy="340" r="40" fill="#a5d6a7" opacity="0.06"/>
+</svg>

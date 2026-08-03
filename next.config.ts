@@ -59,6 +59,11 @@ const nextConfig: NextConfig = {
         destination: "/services/report-analysis",
         permanent: true,
       },
+      {
+        source: "/services/consultation",
+        destination: "/services/cancer-companion",
+        permanent: true,
+      },
     ];
   },
 };

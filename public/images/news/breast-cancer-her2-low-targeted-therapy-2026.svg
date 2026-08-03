@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <filter id="sh2" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#2c3e50" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf5f0"/>
+      <stop offset="100%" stop-color="#f0e4d5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg4)"/>
+  <rect x="300" y="0" width="220" height="400" fill="#fff0f0" opacity="0.15"/>
+  <!-- 顯微鏡玻片 -->
+  <rect x="250" y="160" width="140" height="90" fill="#fefefe" rx="6" filter="url(#sh2)" transform="rotate(-3 320 205)"/>
+  <rect x="255" y="165" width="130" height="80" fill="#fafafa" rx="4" transform="rotate(-3 320 205)"/>
+  <!-- 玻片上的細胞圖 -->
+  <circle cx="290" cy="195" r="14" fill="#f8bbd0" opacity="0.5"/>
+  <circle cx="290" cy="195" r="9" fill="#f48fb1" opacity="0.4"/>
+  <circle cx="320" cy="210" r="11" fill="#f8bbd0" opacity="0.4"/>
+  <circle cx="345" cy="195" r="13" fill="#f48fb1" opacity="0.35"/>
+  <circle cx="310" cy="185" r="10" fill="#f8bbd0" opacity="0.45"/>
+  <!-- 粉紅絲帶 -->
+  <path d="M520 150 Q500 130 520 110 Q540 130 520 150 Z" fill="#f48fb1" filter="url(#sh2)" opacity="0.8"/>
+  <path d="M520 150 Q500 130 522 108 Q535 125 520 150 Z" fill="#f06292" opacity="0.5"/>
+  <!-- 粉紅色花朵 -->
+  <rect x="140" y="260" width="4" height="50" fill="#81c784" rx="2"/>
+  <circle cx="142" cy="255" r="16" fill="#f8bbd0"/>
+  <circle cx="132" cy="250" r="11" fill="#f48fb1"/>
+  <circle cx="152" cy="250" r="11" fill="#f06292"/>
+  <circle cx="142" cy="245" r="9" fill="#fce4ec"/>
+  <!-- 桌面 -->
+  <rect x="80" y="320" width="640" height="80" fill="#e0d4c3" rx="6" filter="url(#sh2)"/>
+  <!-- 醫學手冊 -->
+  <rect x="420" y="270" width="120" height="55" fill="#fff" rx="5" filter="url(#sh2)" transform="rotate(2 480 297)"/>
+  <rect x="425" y="275" width="110" height="15" fill="#f48fb1" rx="3" transform="rotate(2 480 297)"/>
+  <rect x="430" y="296" width="80" height="4" fill="#ddd" rx="2"/>
+  <rect x="430" y="305" width="70" height="4" fill="#ddd" rx="2"/>
+  <rect x="430" y="314" width="85" height="4" fill="#ddd" rx="2"/>
+  <!-- 前景虛化 -->
+  <ellipse cx="680" cy="350" rx="50" ry="30" fill="#f8bbd0" opacity="0.06"/>
+</svg>

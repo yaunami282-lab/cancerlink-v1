@@ -27,9 +27,16 @@ export const CONFIG = {
     "我們的醫學顧問團隊隨時為您解答臨床試驗、醫生預約和基因檢測相關問題。",
   whatsappBubbleText: "💬 線上醫學顧問 - 點擊即時連線",
 
+  /** 是否顯示 WhatsApp 功能 */
+  showWhatsApp: false,
+  /** 是否顯示聯絡郵箱 */
+  showContactEmail: false,
+  /** 是否顯示地點資訊 */
+  showLocation: false,
+
   /** 黃金廣告位文案 */
   ctaHighlight: "一旦患者成功配對入組，所有試驗相關治療費用全免！",
-  ctaButton: "開始免費配對評估",
+  ctaButton: "臨床研究配對",
 
   /** 聯絡電郵 */
   contactEmail: "info@cancerlink.co",
@@ -41,8 +48,8 @@ export const CONFIG = {
 /** 導航選單 */
 export const NAV_ITEMS = [
   { label: "首頁", href: "/" },
-  { label: "報告分析", href: "/services/report-analysis" },
-  { label: "預約醫生", href: "/services/consultation" },
+  { label: "臨床研究配對", href: "/services/report-analysis" },
+  { label: "腫瘤陪跑", href: "/services/cancer-companion" },
   { label: "基因檢測", href: "/services/genetic-testing" },
   { label: "前沿資訊", href: "/news" },
 ];
@@ -54,18 +61,18 @@ export const SERVICES = [
     icon: "📊",
     title: "報告分析與研究配對",
     description:
-      "上傳您的醫學檢查報告，AI + 專家團隊為您精準配對全球正在招募的臨床試驗，抓住每一個治療新希望。",
+      "上傳您的醫學檢查報告，臨床研究團隊為您精準配對全球正在招募的臨床試驗，抓住每一個治療新希望。",
     href: "/services/report-analysis",
     color: "bg-[#f0f7f4] border-l-4 border-[#40916c]",
   },
   {
-    id: "consultation",
-    icon: "👨‍⚕️",
-    title: "預約諮詢腫瘤醫生",
+    id: "cancer-companion",
+    icon: "🤝",
+    title: "腫瘤陪跑服務",
     description:
-      "匯聚頂尖三甲醫院腫瘤專家，提供免費初步問診評估，讓專業醫生為您的治療路徑把關。",
-    href: "/services/consultation",
-    color: "bg-[#f0f4f7] border-l-4 border-[#2d6a4f]",
+      "以患者為中心的全流程支援模式，多學科團隊從診斷到康復全程陪伴，讓抗癌路上不再孤單。",
+    href: "/services/cancer-companion",
+    color: "bg-[#f0f4f7] border-l-4 border-[#3a7d5a]",
   },
   {
     id: "genetic-testing",

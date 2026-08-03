@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <filter id="sh6" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#2c3e50" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="bg8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf7f2"/>
+      <stop offset="100%" stop-color="#ede4d3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg8)"/>
+  <rect x="400" y="0" width="200" height="400" fill="#fff8e1" opacity="0.15"/>
+  <!-- 桌面 -->
+  <rect x="80" y="300" width="640" height="100" fill="#e0d4c0" rx="8" filter="url(#sh6)"/>
+  <!-- DNA雙螺旋模型 -->
+  <g filter="url(#sh6)" transform="translate(250 160)">
+    <rect x="-4" y="0" width="8" height="100" fill="#c49a6c" rx="3"/>
+    <circle cx="0" cy="0" r="8" fill="#c49a6c"/>
+    <!-- 雙螺旋結構 -->
+    <path d="M-25 10 Q-35 30 -25 50 Q-35 70 -25 90" stroke="#52b788" stroke-width="4" fill="none"/>
+    <path d="M25 10 Q35 30 25 50 Q35 70 25 90" stroke="#52b788" stroke-width="4" fill="none"/>
+    <path d="M-25 10 Q-15 30 -25 50 Q-15 70 -25 90" stroke="#a5d6a7" stroke-width="4" fill="none"/>
+    <path d="M25 10 Q15 30 25 50 Q15 70 25 90" stroke="#a5d6a7" stroke-width="4" fill="none"/>
+    <!-- 連接橫槓 -->
+    <line x1="-15" y1="20" x2="15" y2="20" stroke="#40916c" stroke-width="2"/>
+    <line x1="-20" y1="35" x2="20" y2="35" stroke="#40916c" stroke-width="2"/>
+    <line x1="-22" y1="50" x2="22" y2="50" stroke="#40916c" stroke-width="2"/>
+    <line x1="-20" y1="65" x2="20" y2="65" stroke="#40916c" stroke-width="2"/>
+    <line x1="-15" y1="80" x2="15" y2="80" stroke="#40916c" stroke-width="2"/>
+  </g>
+  <!-- 家族圖譜卡片 -->
+  <rect x="420" y="170" width="200" height="140" fill="#fff" rx="6" filter="url(#sh6)"/>
+  <rect x="425" y="175" width="190" height="130" fill="#fefefe" rx="4"/>
+  <rect x="430" y="180" width="180" height="20" fill="#f5f0e8" rx="3"/>
+  <text x="520" y="194" text-anchor="middle" fill="#8b7355" font-size="9" font-weight="600" font-family="sans-serif">家族病史圖譜</text>
+  <!-- 家族樹簡化 -->
+  <circle cx="480" cy="215" r="8" fill="#f8bbd0" stroke="#d4a574" stroke-width="1.5"/>
+  <circle cx="540" cy="215" r="8" fill="#f8bbd0" stroke="#d4a574" stroke-width="1.5"/>
+  <circle cx="510" cy="240" r="8" fill="#f48fb1" stroke="#f06292" stroke-width="1.5"/>
+  <rect cx="470" cy="260" width="16" height="16" fill="#bbdefb" stroke="#90a4ae" stroke-width="1.5"/>
+  <rect cx="530" cy="260" width="16" height="16" fill="#bbdefb" stroke="#90a4ae" stroke-width="1.5"/>
+  <line x1="480" y1="223" x2="504" y2="233" stroke="#ccc" stroke-width="1"/>
+  <line x1="540" y1="223" x2="514" y2="233" stroke="#ccc" stroke-width="1"/>
+  <line x1="510" y1="248" x2="478" y2="255" stroke="#ccc" stroke-width="1"/>
+  <line x1="510" y1="248" x2="538" y2="255" stroke="#ccc" stroke-width="1"/>
+  <!-- 基因報告 -->
+  <rect x="100" y="200" width="140" height="90" fill="#fff" rx="6" filter="url(#sh6)" transform="rotate(1 170 245)"/>
+  <rect x="105" y="205" width="130" height="80" fill="#fefefe" rx="4" transform="rotate(1 170 245)"/>
+  <text x="170" y="222" text-anchor="middle" fill="#2d6a4f" font-size="10" font-weight="700" font-family="sans-serif" transform="rotate(1 170 245)">BRCA1/2</text>
+  <text x="170" y="238" text-anchor="middle" fill="#888" font-size="9" font-family="sans-serif" transform="rotate(1 170 245)">基因檢測報告</text>
+  <rect x="125" y="248" width="70" height="4" fill="#e0e0e0" rx="2"/>
+  <rect x="125" y="258" width="55" height="4" fill="#e0e0e0" rx="2"/>
+  <rect x="125" y="268" width="65" height="4" fill="#e0e0e0" rx="2"/>
+  <!-- 前景虛化 -->
+  <ellipse cx="700" cy="340" rx="45" ry="28" fill="#f8bbd0" opacity="0.05"/>
+</svg>

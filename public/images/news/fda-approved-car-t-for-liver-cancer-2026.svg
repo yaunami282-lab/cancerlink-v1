@@ -1,61 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a365d"/>
-      <stop offset="50%" stop-color="#2a4a7f"/>
-      <stop offset="100%" stop-color="#2d6a4f"/>
+    <filter id="sh" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#2c3e50" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f4ee"/>
+      <stop offset="100%" stop-color="#ece3d5"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg2)"/>
-
-  <!-- 細胞/CAR-T 圖案 -->
-  <g transform="translate(850, 280)" opacity="0.12">
-    <circle cx="0" cy="0" r="100" fill="white"/>
-    <circle cx="0" cy="0" r="75" fill="none" stroke="white" stroke-width="2"/>
-    <!-- 表面受體 -->
-    <g stroke="white" stroke-width="3" fill="none">
-      <path d="M0 -100 L0 -140 M0 -140 L-15 -155"/>
-      <path d="M71 -71 L100 -100 M100 -100 L115 -85"/>
-      <path d="M100 0 L140 0 M140 0 L155 -15"/>
-      <path d="M71 71 L100 100 M100 100 L85 115"/>
-      <path d="M0 100 L0 140 M0 140 L15 155"/>
-      <path d="M-71 71 L-100 100 M-100 100 L-115 85"/>
-      <path d="M-100 0 L-140 0 M-140 0 L-155 15"/>
-      <path d="M-71 -71 L-100 -100 M-100 -100 L-85 -115"/>
-    </g>
-    <!-- Y型抗體標記 -->
-    <g transform="translate(-30, -30)" fill="white" opacity="0.6">
-      <rect x="0" y="0" width="4" height="12" rx="2"/>
-      <rect x="-5" y="-8" width="4" height="10" rx="2" transform="rotate(-30, -3, -8)"/>
-      <rect x="5" y="-8" width="4" height="10" rx="2" transform="rotate(30, 7, -8)"/>
-    </g>
-  </g>
-
-  <!-- 分子結構裝飾 -->
-  <g transform="translate(200, 400)" opacity="0.08">
-    <circle cx="0" cy="0" r="30" fill="white"/>
-    <circle cx="80" cy="-40" r="20" fill="white"/>
-    <circle cx="80" cy="40" r="20" fill="white"/>
-    <circle cx="160" cy="0" r="25" fill="white"/>
-    <line x1="30" y1="0" x2="60" y2="-20" stroke="white" stroke-width="3"/>
-    <line x1="30" y1="0" x2="60" y2="20" stroke="white" stroke-width="3"/>
-    <line x1="100" y1="-20" x2="135" y2="-5" stroke="white" stroke-width="3"/>
-    <line x1="100" y1="20" x2="135" y2="5" stroke="white" stroke-width="3"/>
-  </g>
-
-  <!-- 實驗室器皿 -->
-  <g transform="translate(120, 90)" opacity="0.1">
-    <rect x="0" y="0" width="12" height="40" rx="2" fill="white"/>
-    <rect x="20" y="-10" width="16" height="50" rx="3" fill="white"/>
-    <rect x="44" y="5" width="10" height="35" rx="2" fill="white"/>
-    <path d="M0 20 Q30 -20 54 20" stroke="white" stroke-width="2" fill="none"/>
-  </g>
-
-  <!-- 文字區 -->
-  <g transform="translate(80, 160)">
-    <text x="0" y="0" font-family="Noto Sans TC, sans-serif" font-size="48" font-weight="800" fill="white">FDA 正式批准</text>
-    <text x="0" y="60" font-family="Noto Sans TC, sans-serif" font-size="34" font-weight="500" fill="rgba(255,255,255,0.85)">全球首款肝癌 CAR-T 細胞療法上市</text>
-    <rect x="0" y="90" width="60" height="4" rx="2" fill="#52b788"/>
-    <text x="0" y="135" font-family="Noto Sans TC, sans-serif" font-size="20" fill="rgba(255,255,255,0.6)">靶向藥物 · Cancer Link 癌研連線</text>
-  </g>
+  <rect width="800" height="400" fill="url(#bg3)"/>
+  <rect x="420" y="0" width="200" height="400" fill="#fff3e0" opacity="0.18"/>
+  <!-- 靜脈輸液架 -->
+  <rect x="480" y="50" width="6" height="280" fill="#c0c0c0" rx="3" filter="url(#sh)"/>
+  <rect x="460" y="50" width="46" height="10" fill="#c0c0c0" rx="3"/>
+  <!-- 輸液袋 -->
+  <rect x="440" y="65" width="60" height="80" fill="#e8f5e9" rx="8" filter="url(#sh)"/>
+  <rect x="442" y="67" width="56" height="76" fill="#f1f8f2" rx="6"/>
+  <rect x="445" y="70" width="50" height="12" fill="#c8e6c9" rx="3"/>
+  <line x1="470" y1="145" x2="470" y2="185" stroke="#ddd" stroke-width="2"/>
+  <!-- 窗外景色 -->
+  <rect x="120" y="80" width="240" height="200" fill="#e3f2fd" rx="10"/>
+  <rect x="120" y="80" width="240" height="200" fill="none" stroke="#d4a574" stroke-width="8" rx="10"/>
+  <rect x="235" y="80" width="8" height="200" fill="#d4a574"/>
+  <rect x="120" y="175" width="240" height="8" fill="#d4a574"/>
+  <!-- 窗外樹 -->
+  <ellipse cx="180" cy="140" rx="35" ry="20" fill="#a5d6a7" opacity="0.6"/>
+  <ellipse cx="300" cy="160" rx="30" ry="18" fill="#81c784" opacity="0.5"/>
+  <!-- 窗外陽光 -->
+  <circle cx="320" cy="100" r="25" fill="#fff9c4" opacity="0.4"/>
+  <!-- 窗台 -->
+  <rect x="110" y="280" width="260" height="12" fill="#e8d5b7" rx="3"/>
+  <!-- 盆栽 -->
+  <rect x="300" y="262" width="26" height="20" fill="#c49a6c" rx="3"/>
+  <circle cx="313" cy="256" r="14" fill="#81c784"/>
+  <circle cx="308" cy="250" r="9" fill="#a5d6a7"/>
+  <circle cx="318" cy="252" r="8" fill="#66bb6a"/>
+  <!-- 桌面 -->
+  <rect x="350" y="310" width="400" height="90" fill="#e0d6c5" rx="6" filter="url(#sh)"/>
+  <!-- 前景書本 -->
+  <rect x="370" y="290" width="100" height="24" fill="#d4a574" rx="3" transform="rotate(-5 420 302)"/>
+  <rect x="374" y="293" width="92" height="18" fill="#fefefe" rx="2" transform="rotate(-5 420 302)"/>
 </svg>

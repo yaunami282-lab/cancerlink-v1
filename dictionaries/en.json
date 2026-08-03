@@ -1,0 +1,528 @@
+{
+  "lang": {
+    "label": "繁",
+    "labelFull": "繁體中文",
+    "next": "简",
+    "nextFull": "简体中文",
+    "en": "EN",
+    "enFull": "English"
+  },
+  "nav": {
+    "home": "Home",
+    "trialMatching": "Trial Matching",
+    "cancerCompanion": "Cancer Companion",
+    "geneticTesting": "Genetic Testing",
+    "news": "News",
+    "brandSubtitle": "Cancer Link",
+    "menuOpen": "Open Menu"
+  },
+  "footer": {
+    "brandSubtitle": "Cancer Link",
+    "slogan": "Cancer Link — Connecting Patients to Hope",
+    "copyright": "© 2026 Cancer Link. All rights reserved.",
+    "servicesHeading": "Core Services",
+    "contactHeading": "Contact Us",
+    "whatsappLabel": "WhatsApp: +",
+    "location": "Hong Kong · Queen Mary Hospital Clinical Research Centre",
+    "disclaimer": "The content on this website is for informational purposes only and does not constitute medical advice. Please consult a qualified healthcare professional for personalised medical guidance.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "disclaimerLink": "Disclaimer"
+  },
+  "home": {
+    "heroTitle": "Cancer Link",
+    "heroSubtitle": "Connecting Patients to Hope",
+    "heroSubtitleEn": "connect patient to hope.",
+    "ctaHighlight": "Once successfully enrolled, all trial-related treatment costs are covered by the sponsor — at no cost to you!",
+    "ctaButton": "Find Clinical Trials",
+    "servicesHeading": "Our Core Services",
+    "servicesSubtitle": "Three integrated service modules covering clinical trial matching, cancer companion support, and genetic testing",
+    "learnMore": "Learn More",
+    "faqHeading": "Frequently Asked Questions",
+    "faqSubtitle": "Click on a question to view expert answers",
+    "faqCtaHeading": "Still Have Questions?",
+    "faqCtaDesc": "Our medical advisory team is available to answer your questions about clinical trials, cancer companion services, and genetic testing.",
+    "faqCtaButton": "Chat with Us Now"
+  },
+  "services": {
+    "reportAnalysis": {
+      "title": "Report Analysis & Trial Matching",
+      "description": "Upload your medical reports and our clinical research team will match you with the most suitable global clinical trials.",
+      "pageTitle": "Report Analysis & Trial Matching - Cancer Link",
+      "pageDesc": "Upload your medical reports. AI + expert team will precisely match you with global clinical trials currently recruiting.",
+      "heroHeading": "📊 Report Analysis & Trial Matching",
+      "heroSubtitle": "Upload your medical reports for in-depth analysis by our expert team. We will match you with the most suitable clinical trials from our global database.",
+      "processHeading": "How It Works",
+      "processSteps": [
+        { "icon": "📤", "title": "Upload Reports", "desc": "Securely upload your medical reports and records through our encrypted channel" },
+        { "icon": "🔍", "title": "Expert Analysis", "desc": "Our clinical research team conducts professional analysis and preliminary assessment" },
+        { "icon": "🎯", "title": "Precision Matching", "desc": "We match your profile against our global clinical trial database to find the most suitable options" },
+        { "icon": "🤝", "title": "Enrolment Support", "desc": "We help you connect with research institutions and navigate the enrolment process" }
+      ],
+      "formHeading": "Start Your Trial Matching",
+      "formSubtitle": "Fill in your details and upload your reports — we will contact you within 24 hours",
+      "formTitle": "Trial Matching Application",
+      "formDesc": "Please provide your basic information and medical reports",
+      "trialsHeading": "Currently Recruiting Clinical Trials",
+      "trialsSubtitle": "The following clinical trials are currently recruiting. Data is regularly synchronised from ClinicalTrials.gov."
+    },
+    "cancerCompanion": {
+      "title": "Cancer Companion Service",
+      "description": "A patient-centred, full-journey support model. Our multidisciplinary team accompanies you from diagnosis through to recovery.",
+      "pageTitle": "Cancer Companion Service - Cancer Link",
+      "pageDesc": "A patient-centred, full-journey oncology support service. Our multidisciplinary team provides continuous support from diagnosis through treatment to recovery, including care navigation, treatment management, and decision support.",
+      "heroHeading": "🤝 Cancer Companion Service",
+      "heroSubtitle": "Our Cancer Companion Service is a comprehensive, person-centred oncology support programme. A multidisciplinary team — including case managers, clinical research specialists, and nutritionists — works together to provide continuous support for patients and their families from diagnosis through treatment to recovery. The service covers the entire disease journey, enabling seamless transitions from pre-hospital to post-hospital care, and from hospital to home.",
+      "pillarsHeading": "Core Service Areas",
+      "pillars": [
+        { "icon": "🏥", "title": "Care Navigation", "desc": "Assistance with specialist appointments, medical record organisation, appointment accompaniment, and doctor's order documentation to ensure efficient care." },
+        { "icon": "💊", "title": "Treatment & Recovery Management", "desc": "Personalised treatment tracking plans, side effect management, medication reminders, nutrition and exercise guidance throughout your treatment journey." },
+        { "icon": "📋", "title": "Information & Decision Support", "desc": "Interpretation of medical reports and treatment options, clinical trial matching information, and support for informed decision-making at key milestones." }
+      ],
+      "teamHeading": "Your Dedicated Multidisciplinary Team",
+      "teamSubtitle": "Each team member plays a specialised role, working together to ensure comprehensive support throughout your cancer journey",
+      "teamMembers": [
+        { "icon": "👩‍⚕️", "title": "Case Manager", "desc": "Your dedicated point of contact, coordinating all service components and ensuring seamless communication between the medical team and you." },
+        { "icon": "🔬", "title": "Clinical Research Specialist", "desc": "Continuously tracking the latest global clinical trials and treatment options to match you with the most suitable research opportunities." },
+        { "icon": "🥗", "title": "Nutritionist", "desc": "Providing science-based dietary recommendations and nutritional supplementation plans tailored to your treatment stage and personal needs." }
+      ],
+      "journeyHeading": "Full-Journey Companionship",
+      "journeySubtitle": "We stand by your side at every critical stage, from diagnosis through long-term follow-up",
+      "journeyStages": [
+        { "icon": "🔍", "title": "Diagnosis Phase", "desc": "Organising diagnostic reports, arranging second opinions, and establishing personalised treatment baselines" },
+        { "icon": "💪", "title": "Treatment Phase", "desc": "Tracking treatment progress, managing side effects, and coordinating multidisciplinary consultations" },
+        { "icon": "🌱", "title": "Recovery Phase", "desc": "Developing rehabilitation plans, providing nutrition and exercise guidance, and scheduling regular follow-ups" },
+        { "icon": "🛡️", "title": "Recurrence Management", "desc": "Establishing long-term monitoring protocols for early detection of recurrence and rapid response activation" }
+      ],
+      "suitabilityHeading": "Is the Cancer Companion Service Right for You?",
+      "suitabilitySubtitle": "If you are experiencing any of the following, our Cancer Companion Service is here for you",
+      "suitabilityItems": [
+        "Recently diagnosed with cancer and feeling overwhelmed — need professional treatment pathway guidance",
+        "Facing multiple treatment options and struggling to decide — want objective information and decision support",
+        "Currently undergoing treatment and need help managing side effects, medication schedules, and nutrition",
+        "Entering the recovery phase and seeking continuous, science-based management and follow-up",
+        "Concerned about cancer recurrence risk and need a systematic, long-term monitoring and prevention plan",
+        "As a family caregiver, want to provide the best support but feel exhausted and overwhelmed",
+        "Experiencing significant psychological stress during the cancer journey and need emotional support and professional companionship"
+      ],
+      "formHeading": "Learn About Our Cancer Companion Service",
+      "formSubtitle": "Fill in your details and a case manager will contact you to understand your needs and develop a personalised companion plan",
+      "formTitle": "Cancer Companion Service Application",
+      "formDesc": "Please provide your basic information and a brief description of your needs — we will match you with the most suitable companion team"
+    },
+    "geneticTesting": {
+      "title": "Tumour Genetic Testing",
+      "description": "Providing hereditary risk assessment and precision genetic testing consultation for patients and their families.",
+      "pageTitle": "Tumour Genetic Testing - Cancer Link",
+      "pageDesc": "Hereditary risk assessment and precision genetic testing consultation for patients and families. Understand your genes to protect your family's future health.",
+      "heroHeading": "🧬 Tumour Genetic Testing",
+      "heroSubtitle": "Providing hereditary risk assessment and precision genetic testing consultation. Understand your genes to protect your family's future health.",
+      "coreValueHeading": "Understanding Your Genes Is the Warmest Gift to Your Family",
+      "coreValueDesc": "Tumour genetic testing is not only for patients. Since first-degree relatives share similar genetic backgrounds, family members may also be potential carriers of disease-causing genes. Through genetic testing, we can help you and your family understand risks early and develop prevention strategies.",
+      "whoHeading": "Who Should Consider Tumour Genetic Testing?",
+      "whoItems": [
+        { "icon": "👨‍👩‍👧‍👦", "title": "Family Members of Cancer Patients", "desc": "First-degree relatives of someone diagnosed with cancer who want to understand their own genetic risk" },
+        { "icon": "🔬", "title": "Young-Onset Cancer Patients", "desc": "Diagnosed with cancer before age 50 — may indicate an underlying hereditary cancer syndrome" },
+        { "icon": "📋", "title": "Multiple Primary Tumour Patients", "desc": "Multiple primary tumours in the same individual, possibly linked to genetic mutations" },
+        { "icon": "🏥", "title": "Rare Cancer Patients", "desc": "Diagnosed with rare or unusual tumour types — seeking targeted therapy options based on genetic profiling" }
+      ],
+      "processHeading": "Simple and Hassle-Free Testing Process",
+      "processSteps": [
+        { "icon": "💉", "title": "Easy Sample Collection", "desc": "Just a small blood draw or saliva sample — no hospitalisation or special preparation needed" },
+        { "icon": "🔬", "title": "Professional Testing", "desc": "Samples are sent to certified laboratories for comprehensive genetic analysis using next-generation sequencing" },
+        { "icon": "📋", "title": "Report Interpretation", "desc": "A genetic counsellor provides one-on-one report interpretation and personalised risk management recommendations" }
+      ],
+      "formHeading": "Apply for Genetic Testing Consultation",
+      "formSubtitle": "Fill in your details and a genetic counsellor will contact you within 48 hours",
+      "formTitle": "Genetic Testing Consultation Application",
+      "formDesc": "Includes one-click family history assessment option",
+      "familyCheckbox": "🏥 I need a 'Family Cancer History Assessment'",
+      "familyCheckboxDesc": "If selected, the genetic counsellor will focus on analysing your family's cancer clustering patterns"
+    }
+  },
+  "news": {
+    "pageTitle": "Oncology News - Cancer Link",
+    "pageDesc": "Latest cancer treatment breakthroughs, targeted therapy advances, immunotherapy research, and early screening guidelines.",
+    "heroHeading": "📰 Oncology News",
+    "heroSubtitle": "Tracking the latest breakthroughs in cancer treatment, targeted drug development, and clinical research worldwide",
+    "categoryAll": "All",
+    "categories": {
+      "immunotherapy": "Immunotherapy",
+      "targetedTherapy": "Targeted Therapy",
+      "screening": "Early Screening",
+      "lifestyle": "Lifestyle Support"
+    },
+    "headline": "Headlines",
+    "latest": "Latest Reports",
+    "backToList": "← Back to News",
+    "sourceLabel": "Source: ",
+    "referenceLabel": "Reference: ",
+    "readMore": "Read More",
+    "publishedOn": "Published",
+    "breadcrumbNews": "Oncology News"
+  },
+  "trials": {
+    "status": "Status",
+    "statusRecruiting": "Recruiting",
+    "cancerTypes": {
+      "breast": "Breast Cancer",
+      "lung": "Lung Cancer",
+      "liver": "Liver Cancer",
+      "gi": "Gastrointestinal Cancer",
+      "other": "Other Cancers"
+    }
+  },
+  "form": {
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "description": "Brief Medical Summary",
+    "placeholder": {
+      "name": "Enter your full name",
+      "phone": "Enter your phone number",
+      "email": "Enter your email address",
+      "description": "Please briefly describe your or your family member's condition..."
+    },
+    "submit": "Submit Application",
+    "placeholderTitle": "Jotform will be embedded here",
+    "privacyNote": "🔒 Your information is strictly confidential and used solely for medical consultation purposes. We will contact you within 24–48 hours of submission.",
+    "reportAnalysis": {
+      "q1": "Your name?",
+      "q2": "Your gender?",
+      "q3": "Your age?",
+      "q4": "Where are you currently located?",
+      "q5": "Your phone number?",
+      "q6": "Your cancer type?",
+      "q7": "Your diagnosis date?",
+      "q8": "Have you had genetic testing?",
+      "q9": "What treatments are you currently receiving?",
+      "q10": "Do you have any chronic diseases?",
+      "q11": "Please briefly describe your condition (e.g., treatment history, recent situation)",
+      "q12": "Upload reports",
+      "q13": "Other medical records (optional)",
+      "gender": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "cancerType": {
+        "breast": "Breast Cancer",
+        "lung": "Lung Cancer",
+        "liver": "Liver Cancer",
+        "gi": "Gastrointestinal Cancer",
+        "leukemia": "Leukemia",
+        "lymphoma": "Lymphoma",
+        "other": "Other"
+      },
+      "geneticTest": {
+        "yes": "Yes",
+        "no": "No",
+        "notSure": "Not Sure"
+      },
+      "currentTreatment": {
+        "surgery": "Surgery",
+        "chemotherapy": "Chemotherapy",
+        "radiation": "Radiation Therapy",
+        "targeted": "Targeted Therapy",
+        "immunotherapy": "Immunotherapy",
+        "other": "Other"
+      },
+      "chronicDisease": {
+        "hypertension": "Hypertension",
+        "diabetes": "Diabetes",
+        "heartDisease": "Heart Disease",
+        "hepatitis": "Hepatitis",
+        "kidneyDisease": "Kidney Disease",
+        "other": "Other"
+      },
+      "placeholder": {
+        "name": "Enter your name",
+        "age": "Enter your age",
+        "location": "Enter your location",
+        "phone": "Enter your phone number",
+        "diagnosisDate": "YYYY-MM",
+        "conditionDescription": "Enter your condition description...",
+        "reportUpload": "File requirements: No restrictions",
+        "otherRecords": "File requirements: No restrictions"
+      }
+    }
+  },
+  "whatsapp": {
+    "defaultMessage": "Hello, I would like to learn more about Cancer Link's clinical trial matching and genetic testing services.",
+    "popupTitle": "Online Medical Advisor",
+    "popupSubtitle": "🟢 Online · Chat Now",
+    "popupDescription": "Our medical advisory team is available to answer your questions about clinical trials, cancer companion services, and genetic testing.",
+    "bubbleText": "💬 Online Medical Advisor — Click to Chat"
+  },
+  "config": {
+    "siteName": "Cancer Link",
+    "slogan": "Cancer Link — Connecting Patients to Hope",
+    "sloganEn": "connect patient to hope.",
+    "ctaHighlight": "Once enrolled, all trial-related treatment costs are covered by the sponsor — at no cost to you!",
+    "ctaButton": "Find Clinical Trials",
+    "copyright": "© 2026 Cancer Link. All rights reserved."
+  },
+  "terms": {
+    "pageTitle": "Terms of Service - Cancer Link",
+    "pageDesc": "Terms of Service for Cancer Link, outlining your rights and obligations when using our services.",
+    "heading": "Terms of Service",
+    "sections": {
+      "service": {
+        "title": "1. Service Description",
+        "intro": "Cancer Link ('we', 'us', 'our') is an information platform connecting cancer patients with international clinical research resources. Our services include:",
+        "items": [
+          "Clinical Trial Matching: Precision matching of your medical profile with global clinical trials currently recruiting",
+          "Medical Report Analysis: Preliminary analysis and recommendations from our medical advisory team",
+          "Cancer Companion Service: Patient-centred, full-journey support with a multidisciplinary team from diagnosis to recovery",
+          "Genetic Testing Consultation: Information and guidance on tumour genetic testing",
+          "Medical News & Updates: Latest developments in cancer treatment and clinical research"
+        ]
+      },
+      "user": {
+        "title": "2. User Eligibility & Obligations",
+        "qualificationTitle": "2.1 Eligibility",
+        "qualificationItems": [
+          "18 years or older, or possessing full legal capacity",
+          "If under 18, must be accompanied and consented to by a legal guardian",
+          "Able to understand and agree to these Terms of Service"
+        ],
+        "obligationTitle": "2.2 User Obligations",
+        "obligationItems": [
+          "Provide true, accurate, and complete personal and medical information",
+          "Take full responsibility for the truthfulness, legality, and accuracy of content you upload",
+          "Not use our services for any illegal or unauthorised activities",
+          "Not infringe upon others' intellectual property, privacy, or other rights",
+          "Not interfere with or disrupt our services or website operation",
+          "Not engage in activities that may impose unreasonable or disproportionate loads on our systems"
+        ]
+      },
+      "trial": {
+        "title": "3. Clinical Trial Participation",
+        "importantTitle": "📋 Important Notice",
+        "importantItems": [
+          "We do not directly conduct or sponsor clinical research projects",
+          "Enrolment decisions are made solely by the research institution and principal investigator",
+          "Participation in clinical research is entirely voluntary — you have the right to withdraw at any time",
+          "Please read and fully understand the informed consent form; discuss any questions with the research physician"
+        ],
+        "costTitle": "💰 Regarding Research Costs",
+        "costContent": "Once successfully enrolled, trial-related treatment costs specified in the research protocol are typically covered by the trial sponsor. Specific cost arrangements are subject to the informed consent form signed with the research institution. Please review the relevant terms carefully and confirm with the research team."
+      },
+      "medical": {
+        "title": "4. Medical Disclaimer",
+        "warningTitle": "⚠️ Important Medical Disclaimer",
+        "warningContent1": "Our website and services are for informational purposes only and do not constitute medical advice, diagnosis, or treatment. All health decisions should be made jointly by you and your treating physician.",
+        "warningContent2": "Never disregard professional medical advice or delay seeking it because of something you have read on this website. If you have any health concerns, please consult a qualified healthcare professional immediately."
+      },
+      "ip": {
+        "title": "5. Intellectual Property",
+        "content": "This website and its content (including but not limited to text, images, icons, software, design, trademarks, and logos) are protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, display, transmit, or otherwise use these materials for commercial purposes without our written permission."
+      },
+      "changes": {
+        "title": "6. Service Modifications & Interruptions",
+        "content": "We reserve the right to modify, update, suspend, or discontinue services at any time without liability to you or any third party. We will make reasonable efforts to provide advance notice of significant changes but cannot guarantee such notice."
+      },
+      "liability": {
+        "title": "7. Limitation of Liability",
+        "intro": "To the maximum extent permitted by law:",
+        "items": [
+          "We shall not be liable for any indirect, incidental, special, punitive, or consequential damages",
+          "Our total liability shall not exceed the fees you have paid to us (if any)",
+          "We shall not be liable for losses caused by force majeure (including but not limited to natural disasters, war, government actions, network failures)"
+        ]
+      },
+      "indemnity": {
+        "title": "8. Indemnification",
+        "content": "You agree to indemnify and hold harmless us, our affiliates, employees, agents, and partners from any claims, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from your use of our services, violation of these terms, or infringement of others' rights."
+      },
+      "disputes": {
+        "title": "9. Dispute Resolution",
+        "content": "These Terms of Service are governed by the laws of the Hong Kong Special Administrative Region. Any disputes shall first be resolved through friendly negotiation. If negotiation fails, either party may bring proceedings in the competent courts of Hong Kong."
+      },
+      "updates": {
+        "title": "10. Terms Updates",
+        "content": "We may update these Terms of Service from time to time. Updated terms will be posted on this page. For significant changes, we will notify you through appropriate channels. Continued use of our services constitutes acceptance of the revised terms."
+      },
+      "contact": {
+        "title": "11. Contact Us",
+        "emailLabel": "📧 Email"
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy - Cancer Link",
+    "pageDesc": "Cancer Link's Privacy Policy, explaining how we collect, use, and protect your personal data.",
+    "heading": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "intro": "Cancer Link ('we', 'us', 'our') places great importance on your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal data. Please read this policy carefully before using our services.",
+    "sections": {
+      "collection": {
+        "title": "1. Data We Collect",
+        "intro": "We may collect your personal data through the following means:",
+        "items": [
+          "Information you directly provide through registration forms or consultation applications when using our website or services",
+          "Information you provide when communicating with us via WhatsApp, email, or other channels",
+          "Information automatically collected through browser cookies and similar tracking technologies",
+          "Medical information you authorise us to obtain from third parties (such as hospitals or testing institutions)"
+        ],
+        "dataTypesTitle": "Types of personal data we may collect include:",
+        "dataTypes": [
+          "Basic personal information: name, phone number, email address",
+          "Health and medical information: medical history, diagnostic reports, treatment records, genetic testing results",
+          "Technical data: IP address, browser type, operating system, access times and page views"
+        ]
+      },
+      "usage": {
+        "title": "2. How We Use Your Data",
+        "intro": "We may use the data we collect for the following purposes:",
+        "items": [
+          "Providing clinical trial matching services based on your medical information",
+          "Arranging cancer companion services and specialist consultations",
+          "Responding to your inquiries, requests, and complaints",
+          "Improving our service quality and website user experience",
+          "Complying with legal, regulatory, and lawful government requests"
+        ]
+      },
+      "sharing": {
+        "title": "3. Data Disclosure & Sharing",
+        "intro": "We do not sell your personal data. We may disclose your data in the following circumstances:",
+        "items": [
+          "With your explicit consent, to relevant clinical research institutions, partner hospitals, or laboratories",
+          "To third-party service providers (such as web hosting, data analytics) who are bound by strict confidentiality obligations",
+          "When required by law, to regulatory authorities, law enforcement, or courts",
+          "In the event of corporate restructuring, merger, or sale, to relevant parties, while ensuring your data continues to be protected"
+        ]
+      },
+      "security": {
+        "title": "4. Data Security",
+        "intro": "We implement reasonable technical and organisational measures to protect your personal data, including:",
+        "items": [
+          "SSL/TLS encryption for data transmission",
+          "Restricted access to personal data — only authorised personnel may access",
+          "Regular review and updating of our security measures",
+          "Staff confidentiality training and agreements"
+        ],
+        "disclaimer": "However, please note that no method of internet transmission or electronic storage is 100% secure. While we strive to protect your personal data, we cannot guarantee its absolute security."
+      },
+      "retention": {
+        "title": "5. Data Retention",
+        "content": "We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected. The specific retention period depends on the nature of the data, the purpose of collection, and legal requirements. When no longer needed, we will securely delete or anonymise your data."
+      },
+      "rights": {
+        "title": "6. Your Rights",
+        "intro": "Under applicable law, you have the following rights regarding your personal data:",
+        "items": [
+          "Right of Access: Request access to personal data we hold about you",
+          "Right of Rectification: Request correction of inaccurate or incomplete personal data",
+          "Right of Erasure: Request deletion of your personal data under certain circumstances",
+          "Right to Restrict Processing: Request restriction of processing under certain circumstances",
+          "Right to Data Portability: Request your data in a structured format or its transfer to a third party",
+          "Right to Object: Object to our processing of your personal data based on legitimate interests"
+        ]
+      },
+      "cookies": {
+        "title": "7. Cookie Policy",
+        "intro": "Our website uses cookies and similar technologies to improve your browsing experience. Cookies are small text files stored on your device.",
+        "types": {
+          "essential": "Essential Cookies: Ensure core website functionality such as page navigation and secure area access. These cookies do not collect personal information.",
+          "analytics": "Analytics Cookies: Help us understand how visitors interact with the website, collecting and reporting anonymous information to improve the website experience.",
+          "preferences": "Preference Cookies: Remember your language preferences and other settings to provide a more personalised browsing experience.",
+          "control": "You can manage or delete cookies through your browser settings. However, please note that disabling certain cookies may affect website functionality."
+        }
+      },
+      "children": {
+        "title": "8. Children's Privacy",
+        "content": "Our services are not directed at individuals under the age of 18. We do not knowingly collect personal data from minors. If we discover we have inadvertently collected data from a minor, we will delete it immediately. If you are a parent or guardian and discover your child has provided us with personal data, please contact us."
+      },
+      "thirdParty": {
+        "title": "9. Third-Party Links",
+        "content": "This website may contain links to third-party websites. We are not responsible for the privacy practices of these third-party sites. We recommend reviewing the privacy policies of any third-party sites you visit."
+      },
+      "updates": {
+        "title": "10. Policy Updates",
+        "content": "We may update this Privacy Policy from time to time. Updated versions will be posted on this page with the revision date noted. For significant changes, we will notify you through website announcements or email."
+      },
+      "contact": {
+        "title": "11. Contact Us",
+        "content": "If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us through the following channels:",
+        "emailLabel": "📧 Email:"
+      }
+    }
+  },
+  "disclaimer": {
+    "pageTitle": "Disclaimer - Cancer Link",
+    "pageDesc": "Cancer Link's Disclaimer, outlining important notices and limitations regarding the use of information on this website.",
+    "heading": "Disclaimer",
+    "sections": {
+      "medical": {
+        "title": "1. Medical Information Disclaimer",
+        "warning": "⚠️ This Website Does Not Provide Medical Advice",
+        "content1": "All content provided on this website, including but not limited to text, images, videos, information, and services, is for general informational and educational purposes only. Nothing on this website should be construed as medical advice, diagnosis, or treatment.",
+        "content2": "You should not rely solely on the information on this website to make medical decisions. Always consult a qualified healthcare professional before making any decisions about your health. Never disregard professional medical advice or delay seeking it because of something you have read on this website.",
+        "content3": "In case of a medical emergency, please call 999 immediately for emergency services."
+      },
+      "trial": {
+        "title": "2. Clinical Trial Information Disclaimer",
+        "content1": "Clinical trial information displayed on this website is sourced from public databases (such as ClinicalTrials.gov) and public announcements from research institutions. While we strive to ensure the accuracy and timeliness of this information, we do not guarantee its completeness, accuracy, or reliability. Trial recruitment status, eligibility criteria, treatment protocols, and other information may change at any time. Please refer to the latest information provided by the research institution.",
+        "content2": "Participation in clinical trials is entirely voluntary. Enrolment decisions are made by the research institution and principal investigator. We do not guarantee any matching results or enrolment success rates."
+      },
+      "info": {
+        "title": "3. Information Accuracy Disclaimer",
+        "content1": "While we make efforts to ensure the accuracy of information on this website, medical knowledge and clinical research are constantly evolving. We cannot guarantee that all information is always completely accurate, complete, or current. Information may contain technical inaccuracies or typographical errors.",
+        "content2": "We reserve the right to change, update, or remove website content at any time without prior notice."
+      },
+      "thirdParty": {
+        "title": "4. Third-Party Content Disclaimer",
+        "content1": "This website may contain links to third-party websites (such as partner hospital websites, clinical trial databases, Jotform forms, etc.). These links are provided for your convenience only and do not constitute endorsement or recommendation of third-party content.",
+        "content2": "We assume no responsibility for the content, privacy policies, or practices of third-party websites. You access any third-party website at your own risk."
+      },
+      "liability": {
+        "title": "5. Limitation of Liability",
+        "intro": "To the maximum extent permitted by law:",
+        "items": [
+          "We shall not be liable for any direct, indirect, incidental, special, punitive, or consequential damages arising from the use of or inability to use this website or its content",
+          "We do not warrant that the website service will be uninterrupted, timely, secure, or error-free, nor that any defects will be corrected",
+          "Your use of this website is at your own risk. The website and its content are provided on an 'as is' basis without any express or implied warranties of any kind"
+        ]
+      },
+      "advice": {
+        "title": "6. Consult a Professional",
+        "content1": "We strongly recommend consulting qualified healthcare professionals before making any medical decisions. This is particularly important:",
+        "items": [
+          "Before starting or changing any treatment plan",
+          "When you have questions or uncertainties about a diagnosis",
+          "Before considering participation in clinical research",
+          "When you have questions about genetic testing results",
+          "When experiencing new symptoms or health concerns"
+        ],
+        "content2": "Your medical decisions should be based on thorough communication and discussion with your healthcare team, not solely on information from this website or any other online resource."
+      },
+      "intellectual": {
+        "title": "7. Intellectual Property Disclaimer",
+        "content1": "All trademarks, logos, service marks, and trade names displayed on this website are the property of their respective owners. Mention or display of any third-party trademark or trade name on this website does not imply any affiliation, sponsorship, or endorsement relationship with such third parties.",
+        "content2": "We respect the intellectual property rights of others. If you believe any content on this website infringes your copyright or other intellectual property rights, please contact us immediately."
+      },
+      "update": {
+        "title": "8. Disclaimer Updates",
+        "content": "We reserve the right to modify this disclaimer at any time. Updated versions will be posted on this page. Continued use of this website constitutes acceptance of the revised disclaimer. We recommend periodically reviewing this page for any changes."
+      }
+    }
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "questions": [
+      { "q": "What is the clinical trial matching service?", "a": "Our clinical trial matching service helps cancer patients find suitable clinical trials. Our expert team analyses your medical reports in detail, screening global clinical trials to find the best matches for your condition, and assists you in contacting research institutions." },
+      { "q": "Who is the Cancer Companion Service for?", "a": "The Cancer Companion Service is suitable for newly diagnosed patients feeling uncertain about treatment direction, patients undergoing treatment who need professional management support, patients entering recovery who want continued monitoring, and family caregivers who feel overwhelmed. Whatever stage of the cancer journey you are in, our companion service provides targeted support." },
+      { "q": "Do patients need to pay for clinical trial treatment costs?", "a": "In most cases, once a patient is successfully enrolled, trial-related treatment costs specified in the research protocol are covered by the trial sponsor. Specific cost arrangements are detailed in the informed consent form. Our team will help you understand the cost arrangements." },
+      { "q": "Who should consider tumour genetic testing?", "a": "Tumour genetic testing is suitable for both cancer patients and their family members. Testing is recommended in the following situations: multiple cancer cases in the family, cancer diagnosis at a young age, multiple or rare primary tumours, or for patients planning targeted therapy." },
+      { "q": "How do I start using Cancer Link's services?", "a": "You can connect with our team instantly via WhatsApp, or fill out the application form on any service page. We will arrange for a specialist to contact you within 24–48 hours to understand your situation and provide personalised recommendations. The entire initial consultation process is completely free." },
+      { "q": "How is my privacy protected during the service?", "a": "We strictly comply with Hong Kong's Personal Data (Privacy) Ordinance. All medical information is encrypted during transmission and storage, and shared only with necessary healthcare professionals within the scope of your authorisation. We will never disclose your personal data to third parties without your explicit consent." }
+    ]
+  },
+  "seo": {
+    "siteTitle": "Cancer Link — Oncology Clinical Trial Matching & Patient Support Platform",
+    "siteDescription": "An AI-powered oncology clinical trial precision matching platform connecting every cancer patient to hope. Clinical trial matching, cancer companion services, genetic testing consultation. Once enrolled, all trial-related treatment costs are covered — at no cost to you!",
+    "keywords": "cancer clinical trials,clinical research,trial matching,cancer patient navigation,genetic testing,cancer treatment,Cancer Link,oncology support",
+    "ogTitle": "Cancer Link — Connecting Patients to Hope",
+    "ogDescription": "An AI-powered oncology clinical trial matching and comprehensive patient support platform. Once enrolled, all trial-related treatment costs are covered — at no cost to you!"
+  }
+}

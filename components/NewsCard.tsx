@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { NewsArticle } from "@/data/news";
+import type { Dictionary } from "@/lib/i18n";
 
 const CATEGORY_STYLES: Record<string, string> = {
   targeted: "bg-blue-50 text-blue-600",
   immunotherapy: "bg-green-50 text-green-600",
   screening: "bg-purple-50 text-purple-600",
   data: "bg-orange-50 text-orange-600",
+  lifestyle: "bg-orange-50 text-orange-600",
 };
 
 const CATEGORY_ICONS: Record<string, string> = {
@@ -13,18 +15,22 @@ const CATEGORY_ICONS: Record<string, string> = {
   immunotherapy: "🛡️",
   screening: "🔍",
   data: "📊",
+  lifestyle: "🌿",
 };
 
 export default function NewsCard({
   article,
   variant = "default",
+  dict,
 }: {
   article: NewsArticle;
   variant?: "default" | "featured" | "compact";
+  dict: Dictionary["news"];
 }) {
   const badgeStyle = CATEGORY_STYLES[article.categoryKey] ?? "bg-gray-50 text-gray-600";
   const icon = CATEGORY_ICONS[article.categoryKey] ?? "📄";
-  const imagePath = `/images/news/${article.slug}.svg`;
+  const imagePath = article.imageUrl;
+  const catLabel = dict.categories[article.categoryKey as keyof typeof dict.categories] || article.category;
 
   if (variant === "featured") {
     return (
@@ -41,7 +47,7 @@ export default function NewsCard({
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/40 to-transparent p-6">
             <span className={`${badgeStyle} text-xs font-semibold px-2.5 py-1 rounded-full`}>
-              {icon} {article.category}
+              {icon} {catLabel}
             </span>
           </div>
         </div>
@@ -52,7 +58,7 @@ export default function NewsCard({
           <p className="text-sm text-gray-500 mb-3 line-clamp-2">{article.summary}</p>
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-400">{article.date}</span>
-            <span className="text-xs text-[#52b788] font-medium">來源: {article.source}</span>
+            <span className="text-xs text-[#52b788] font-medium">{dict.sourceLabel}{article.source}</span>
           </div>
         </div>
       </Link>
@@ -110,7 +116,7 @@ export default function NewsCard({
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-400">{article.date}</span>
           <span className="text-xs text-[#52b788] group-hover:translate-x-1 transition-transform">
-            閱讀全文 →
+            {dict.readMore} →
           </span>
         </div>
       </div>
