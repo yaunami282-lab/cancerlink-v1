@@ -35,7 +35,7 @@ export default async function ReportAnalysisPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#3a7d5a] text-center mb-12">{s.processHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {s.processSteps.map((item, i) => (
+            {s.processSteps.map((item: { icon: string; title: string; desc: string }, i: number) => (
               <div key={item.title} className="text-center">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <div className="w-8 h-8 rounded-full bg-[#52b788] text-white flex items-center justify-center text-sm font-bold mx-auto mb-3">{i + 1}</div>

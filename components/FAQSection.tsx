@@ -21,7 +21,7 @@ export default function FAQSection({ dict: fullDict }: { dict: Dictionary }) {
         </div>
 
         <div className="space-y-4">
-          {faqData.map((item, idx) => {
+          {faqData.map((item: { q: string; a: string }, idx: number) => {
             const isOpen = openId === idx;
             return (
               <div key={idx}>

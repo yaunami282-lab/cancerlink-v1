@@ -322,7 +322,7 @@ export default function ReportAnalysisForm({
             {ra.q9}
           </label>
           <div className="grid grid-cols-2 gap-2">
-            {Object.entries(ra.currentTreatment).map(([key, label]) => (
+            {(Object.entries(ra.currentTreatment) as [string, string][]).map(([key, label]) => (
               <label key={key} className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
@@ -342,7 +342,7 @@ export default function ReportAnalysisForm({
             {ra.q10}
           </label>
           <div className="grid grid-cols-2 gap-2">
-            {Object.entries(ra.chronicDisease).map(([key, label]) => (
+            {(Object.entries(ra.chronicDisease) as [string, string][]).map(([key, label]) => (
               <label key={key} className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"

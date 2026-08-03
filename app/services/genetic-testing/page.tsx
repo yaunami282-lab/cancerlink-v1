@@ -43,7 +43,7 @@ export default async function GeneticTestingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#3a7d5a] text-center mb-12">{s.whoHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {s.whoItems.map((item) => (
+            {s.whoItems.map((item: { icon: string; title: string; desc: string }) => (
               <div key={item.title} className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition-all">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-[#3a7d5a] mb-2">{item.title}</h3>
@@ -58,7 +58,7 @@ export default async function GeneticTestingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#3a7d5a] text-center mb-12">{s.processHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {s.processSteps.map((item) => (
+            {s.processSteps.map((item: { icon: string; title: string; desc: string }) => (
               <div key={item.title} className="text-center p-6 rounded-2xl bg-[#f6faf7] border border-[#52b788]/10">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-[#3a7d5a] mb-3">{item.title}</h3>

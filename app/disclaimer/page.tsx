@@ -46,11 +46,11 @@ export default async function DisclaimerPage() {
           </Sec>
           <Sec title={s.liability.title}>
             <p>{s.liability.intro}</p>
-            <ul>{s.liability.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.liability.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Sec>
           <Sec title={s.advice.title}>
             <p>{s.advice.content1}</p>
-            <ul>{s.advice.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.advice.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
             <p>{s.advice.content2}</p>
           </Sec>
           <Sec title={s.intellectual.title}>

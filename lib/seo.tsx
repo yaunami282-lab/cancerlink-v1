@@ -171,17 +171,17 @@ export function generateBreadcrumbSchema(
  * 用于 FAQ 页面，可让问题答案直接显示在搜索结果中
  */
 export function generateFAQSchema(
-  faqItems: Array<{ question: string; answer: string }>
+  faqItems: Array<{ q: string; a: string }>
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
-      name: item.question,
+      name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.answer,
+        text: item.a,
       },
     })),
   };

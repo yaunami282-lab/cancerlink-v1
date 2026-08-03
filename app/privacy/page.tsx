@@ -29,24 +29,24 @@ export default async function PrivacyPage() {
 
           <Section title={s.collection.title}>
             <p>{s.collection.intro}</p>
-            <ul>{s.collection.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.collection.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
             <p className="font-semibold mt-4">{s.collection.dataTypesTitle}</p>
-            <ul>{s.collection.dataTypes.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.collection.dataTypes.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Section>
 
           <Section title={s.usage.title}>
             <p>{s.usage.intro}</p>
-            <ul>{s.usage.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.usage.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Section>
 
           <Section title={s.sharing.title}>
             <p>{s.sharing.intro}</p>
-            <ul>{s.sharing.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.sharing.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Section>
 
           <Section title={s.security.title}>
             <p>{s.security.intro}</p>
-            <ul>{s.security.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.security.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
             <p className="text-sm text-gray-500 italic">{s.security.disclaimer}</p>
           </Section>
 
@@ -54,7 +54,7 @@ export default async function PrivacyPage() {
 
           <Section title={s.rights.title}>
             <p>{s.rights.intro}</p>
-            <ul>{s.rights.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.rights.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Section>
 
           <Section title={s.cookies.title}>

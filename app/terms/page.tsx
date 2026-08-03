@@ -26,18 +26,18 @@ export default async function TermsPage() {
         <div className="prose prose-green max-w-none">
           <Sec title={s.service.title}>
             <p>{s.service.intro}</p>
-            <ul>{s.service.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.service.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Sec>
           <Sec title={s.user.title}>
             <h3 className="text-lg font-semibold text-gray-800 mb-3">{s.user.qualificationTitle}</h3>
-            <ul>{s.user.qualificationItems.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.user.qualificationItems.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
             <h3 className="text-lg font-semibold text-gray-800 mb-3 mt-6">{s.user.obligationTitle}</h3>
-            <ul>{s.user.obligationItems.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.user.obligationItems.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Sec>
           <Sec title={s.trial.title}>
             <div className="bg-[#f6faf7] border border-[#52b788]/30 rounded-xl p-6 mb-6">
               <p className="text-[#3a7d5a] font-semibold mb-3">{s.trial.importantTitle}</p>
-              <ul>{s.trial.importantItems.map((t, i) => <li key={i}>{t}</li>)}</ul>
+              <ul>{s.trial.importantItems.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
             </div>
             <div className="bg-[#fef3c7] border border-[#f59e0b]/30 rounded-xl p-6">
               <p className="text-[#d97706] font-semibold mb-3">{s.trial.costTitle}</p>
@@ -55,7 +55,7 @@ export default async function TermsPage() {
           <Sec title={s.changes.title}><p>{s.changes.content}</p></Sec>
           <Sec title={s.liability.title}>
             <p>{s.liability.intro}</p>
-            <ul>{s.liability.items.map((t, i) => <li key={i}>{t}</li>)}</ul>
+            <ul>{s.liability.items.map((t: string, i: number) => <li key={i}>{t}</li>)}</ul>
           </Sec>
           <Sec title={s.indemnity.title}><p>{s.indemnity.content}</p></Sec>
           <Sec title={s.disputes.title}><p>{s.disputes.content}</p></Sec>

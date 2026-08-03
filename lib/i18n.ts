@@ -1,5 +1,6 @@
 import "server-only";
-import type { Dict } from "@/dictionaries/zh-HK.json";
+
+import zhHK from "@/dictionaries/zh-HK.json";
 
 const dictionaries = {
   "zh-HK": () => import("@/dictionaries/zh-HK.json").then((m) => m.default),
@@ -8,7 +9,7 @@ const dictionaries = {
 };
 
 export type Locale = keyof typeof dictionaries;
-export type Dictionary = typeof Dict extends infer T ? T : never;
+export type Dictionary = typeof zhHK;
 
 export const locales: Locale[] = ["zh-HK", "zh-CN", "en"];
 export const defaultLocale: Locale = "zh-HK";
