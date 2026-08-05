@@ -109,7 +109,8 @@ export async function readSheet(serviceType: string): Promise<FormSubmission[]> 
   }
 
   const token = await getAccessToken(["https://www.googleapis.com/auth/spreadsheets"]);
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(serviceType)}!A:F`;
+  const range = serviceType === "report-analysis" ? "A:P" : "A:F";
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(serviceType)}!${range}`;
 
   const res = await fetch(url, {
     headers: { Authorization: `Bearer ${token}` },
@@ -127,5 +128,19 @@ export async function readSheet(serviceType: string): Promise<FormSubmission[]> 
     email: row[3] || "",
     description: row[4] || "",
     familyHistory: row[5] === "是" ? true : row[5] === "否" ? false : undefined,
+    // 報告分析專用字段（僅 report-analysis sheet 有此列）
+    gender: row[6] || undefined,
+    age: row[7] || undefined,
+    location: row[8] || undefined,
+    cancerType: row[9] || undefined,
+    diagnosisDate: row[10] || undefined,
+    geneticTest: row[11] || undefined,
+    currentTreatment: row[12] ? row[12].split(", ") : undefined,
+    chronicDisease: row[13] ? row[13].split(", ") : undefined,
+    conditionDescription: row[14] || undefined,
+    reportFileName: row[15] || undefined,
+    reportFileUrl: row[16] || undefined,
+    otherRecordsFileName: row[17] || undefined,
+    otherRecordsFileUrl: row[18] || undefined,
   }));
 }
