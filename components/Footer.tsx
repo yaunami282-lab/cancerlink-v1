@@ -54,20 +54,24 @@ export default function Footer({ dict }: { dict: Dictionary["footer"] }) {
               {dict.contactHeading}
             </h3>
             <ul className="space-y-3 text-sm text-green-200/80">
+              {/*
               <li className="flex items-center gap-2">
                 <span>💬</span>
                 <span>{dict.whatsappLabel}85218399216276</span>
               </li>
+              */}
               <li className="flex items-center gap-2">
                 <span>📧</span>
                 <a href="mailto:info@cancerlink.co" className="hover:text-white transition-colors">
                   info@cancerlink.co
                 </a>
               </li>
+              {/*
               <li className="flex items-center gap-2">
                 <span>📍</span>
                 <span>{dict.location}</span>
               </li>
+              */}
             </ul>
           </div>
         </div>

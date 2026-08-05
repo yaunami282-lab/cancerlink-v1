@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
+// import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { LocaleProvider } from "@/components/LocaleProvider";
 import {
   JsonLd,
@@ -86,7 +86,7 @@ export default async function RootLayout({
           <Navbar dict={dict.nav} />
           <main className="flex-1">{children}</main>
           <Footer dict={dict.footer} />
-          <WhatsAppWidget dict={dict.whatsapp} config={dict.config} />
+          {/* <WhatsAppWidget dict={dict.whatsapp} config={dict.config} /> */}
           <JsonLd data={generateOrganizationSchema()} />
           <JsonLd data={generateWebSiteSchema()} />
         </LocaleProvider>

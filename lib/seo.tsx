@@ -33,7 +33,6 @@ export function generateOrganizationSchema() {
     logo: `${SITE_URL}/images/logo.png`,
     description: CONFIG.slogan,
     email: CONFIG.contactEmail,
-    telephone: `+${CONFIG.whatsappNumber}`,
     address: {
       "@type": "PostalAddress",
       addressRegion: "Hong Kong",

@@ -52,6 +52,7 @@ export default function FAQSection({ dict: fullDict }: { dict: Dictionary }) {
           })}
         </div>
 
+        {/* WhatsApp CTA - 暫時隱藏，更換客服帳號後恢復
         <div className="text-center mt-14 p-8 bg-[#f6faf7] rounded-2xl border border-[#52b788]/15">
           <p className="text-lg font-semibold text-[#3a7d5a] mb-2">{h.faqCtaHeading}</p>
           <p className="text-gray-500 mb-5 text-sm">{h.faqCtaDesc}</p>
@@ -64,6 +65,7 @@ export default function FAQSection({ dict: fullDict }: { dict: Dictionary }) {
             💬 {h.faqCtaButton}
           </a>
         </div>
+        */}
       </div>
     </section>
   );
