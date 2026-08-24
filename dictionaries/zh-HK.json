@@ -36,13 +36,18 @@
     "ctaHighlight": "一旦患者成功配對入組，所有試驗相關治療費用全免！",
     "ctaButton": "臨床研究配對",
     "servicesHeading": "我們的核心服務",
-    "servicesSubtitle": "三大服務模組，覆蓋從臨床試驗配對到腫瘤陪跑的全方位支援",
+    "servicesSubtitle": "兩大核心服務，從臨床研究配對到基因檢測，為患者提供精準支援",
     "learnMore": "了解更多",
     "faqHeading": "常見疑問解答",
     "faqSubtitle": "點擊問題，查看專業解答",
     "faqCtaHeading": "還有更多疑問？",
     "faqCtaDesc": "我們的醫學顧問團隊隨時為您解答臨床試驗、腫瘤陪跑和基因檢測相關問題。",
-    "faqCtaButton": "立即在線諮詢"
+    "faqCtaButton": "立即在線諮詢",
+    "statsBar": [
+      { "value": "200+", "label": "臨床研究", "sub": "全球招募中" },
+      { "value": "20+", "label": "癌症類型", "sub": "全面覆蓋" },
+      { "value": "AI", "label": "智能驅動", "sub": "專家團隊跟進配對" }
+    ]
   },
   "services": {
     "reportAnalysis": {

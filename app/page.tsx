@@ -1,5 +1,6 @@
 import { headers } from "next/headers";
 import HeroSection from "@/components/HeroSection";
+import StrengthShowcase from "@/components/StrengthShowcase";
 import ServiceCards from "@/components/ServiceCards";
 import FAQSection from "@/components/FAQSection";
 import { JsonLd, generateFAQSchema } from "@/lib/seo";
@@ -15,6 +16,7 @@ export default async function Home() {
     <>
       <JsonLd data={generateFAQSchema(dict.faq.questions)} />
       <HeroSection dict={dict.home} />
+      <StrengthShowcase />
       <ServiceCards dict={dict} />
       <FAQSection dict={dict} />
     </>

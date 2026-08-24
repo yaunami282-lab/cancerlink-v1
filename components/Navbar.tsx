@@ -7,11 +7,10 @@ import Image from "next/image";
 import { useLocale } from "@/components/LocaleProvider";
 import type { Dictionary } from "@/lib/i18n";
 
-const NAV_KEYS = ["home", "trialMatching", "cancerCompanion", "geneticTesting", "news"] as const;
+const NAV_KEYS = ["home", "trialMatching", "geneticTesting", "news"] as const;
 const NAV_HREFS: Record<string, string> = {
   home: "/",
   trialMatching: "/services/report-analysis",
-  cancerCompanion: "/services/cancer-companion",
   geneticTesting: "/services/genetic-testing",
   news: "/news",
 };
@@ -38,7 +37,7 @@ export default function Navbar({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl shadow-card border-b border-gray-100/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
@@ -47,7 +46,7 @@ export default function Navbar({
               alt="Cancer Link"
               width={40}
               height={40}
-              className="h-10 w-auto rounded-lg"
+              className="h-10 w-auto rounded-lg ring-1 ring-black/5"
             />
             <span className="text-lg font-bold text-[#3a7d5a] tracking-tight hidden sm:block">
               Cancer Link
@@ -65,9 +64,9 @@ export default function Navbar({
                 <Link
                   key={key}
                   href={href}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#52b788]/50 focus-visible:ring-offset-2 ${
                     active
-                      ? "bg-[#e8f5e9] text-[#2b5e43]"
+                      ? "bg-[#e8f5e9] text-[#2b5e43] shadow-sm"
                       : "text-gray-600 hover:text-[#3a7d5a] hover:bg-[#f0faf5]"
                   }`}
                 >
@@ -78,14 +77,14 @@ export default function Navbar({
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="hidden sm:flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
+            <div className="hidden sm:flex items-center gap-0.5 bg-gray-100/80 rounded-lg p-0.5 ring-1 ring-black/3">
               {LANG_OPTIONS.map((opt) => (
                 <button
                   key={opt.key}
                   onClick={() => opt.key !== locale && setLocale(opt.key)}
-                  className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
+                  className={`px-2.5 py-1 rounded-md text-xs font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#52b788]/50 ${
                     opt.key === locale
-                      ? "bg-white text-[#3a7d5a] shadow-sm"
+                      ? "bg-white text-[#3a7d5a] shadow-sm ring-1 ring-black/5"
                       : "text-gray-500 hover:text-[#3a7d5a]"
                   }`}
                 >
@@ -96,7 +95,7 @@ export default function Navbar({
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
+              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors focus-visible:ring-2 focus-visible:ring-[#52b788]/50"
               aria-label={dict.menuOpen}
             >
               {mobileOpen ? (

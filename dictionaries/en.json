@@ -36,13 +36,18 @@
     "ctaHighlight": "Once successfully enrolled, all trial-related treatment costs are covered by the sponsor — at no cost to you!",
     "ctaButton": "Find Clinical Trials",
     "servicesHeading": "Our Core Services",
-    "servicesSubtitle": "Three integrated service modules covering clinical trial matching, cancer companion support, and genetic testing",
+    "servicesSubtitle": "Two core services — AI-driven clinical trial matching and precision genetic testing",
     "learnMore": "Learn More",
     "faqHeading": "Frequently Asked Questions",
     "faqSubtitle": "Click on a question to view expert answers",
     "faqCtaHeading": "Still Have Questions?",
     "faqCtaDesc": "Our medical advisory team is available to answer your questions about clinical trials, cancer companion services, and genetic testing.",
-    "faqCtaButton": "Chat with Us Now"
+    "faqCtaButton": "Chat with Us Now",
+    "statsBar": [
+      { "value": "200+", "label": "Clinical Studies", "sub": "Recruiting globally" },
+      { "value": "20+", "label": "Cancer Types", "sub": "Comprehensive coverage" },
+      { "value": "AI", "label": "AI-Powered", "sub": "Expert team matching" }
+    ]
   },
   "services": {
     "reportAnalysis": {

@@ -36,13 +36,18 @@
     "ctaHighlight": "一旦患者成功配对入组，所有试验相关治疗费用全免！",
     "ctaButton": "临床研究配对",
     "servicesHeading": "我们的核心服务",
-    "servicesSubtitle": "三大服务模块，覆盖从临床试验配对到肿瘤陪跑的全方位支持",
+    "servicesSubtitle": "两大核心服务，从临床研究配对到基因检测，为患者提供精准支持",
     "learnMore": "了解更多",
     "faqHeading": "常见疑问解答",
     "faqSubtitle": "点击问题，查看专业解答",
     "faqCtaHeading": "还有更多疑问？",
     "faqCtaDesc": "我们的医学顾问团队随时为您解答临床试验、肿瘤陪跑和基因检测相关问题。",
-    "faqCtaButton": "立即在线咨询"
+    "faqCtaButton": "立即在线咨询",
+    "statsBar": [
+      { "value": "200+", "label": "临床研究", "sub": "全球招募中" },
+      { "value": "20+", "label": "癌症类型", "sub": "全面覆盖" },
+      { "value": "AI", "label": "智能驱动", "sub": "专家团队跟进配对" }
+    ]
   },
   "services": {
     "reportAnalysis": {
