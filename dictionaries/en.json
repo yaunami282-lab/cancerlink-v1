@@ -42,12 +42,7 @@
     "faqSubtitle": "Click on a question to view expert answers",
     "faqCtaHeading": "Still Have Questions?",
     "faqCtaDesc": "Our medical advisory team is available to answer your questions about clinical trials, cancer companion services, and genetic testing.",
-    "faqCtaButton": "Chat with Us Now",
-    "statsBar": [
-      { "value": "200+", "label": "Clinical Studies", "sub": "Recruiting globally" },
-      { "value": "20+", "label": "Cancer Types", "sub": "Comprehensive coverage" },
-      { "value": "AI", "label": "AI-Powered", "sub": "Expert team matching" }
-    ]
+    "faqCtaButton": "Chat with Us Now"
   },
   "services": {
     "reportAnalysis": {

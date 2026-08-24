@@ -42,12 +42,7 @@
     "faqSubtitle": "點擊問題，查看專業解答",
     "faqCtaHeading": "還有更多疑問？",
     "faqCtaDesc": "我們的醫學顧問團隊隨時為您解答臨床試驗、腫瘤陪跑和基因檢測相關問題。",
-    "faqCtaButton": "立即在線諮詢",
-    "statsBar": [
-      { "value": "200+", "label": "臨床研究", "sub": "全球招募中" },
-      { "value": "20+", "label": "癌症類型", "sub": "全面覆蓋" },
-      { "value": "AI", "label": "智能驅動", "sub": "專家團隊跟進配對" }
-    ]
+    "faqCtaButton": "立即在線諮詢"
   },
   "services": {
     "reportAnalysis": {
